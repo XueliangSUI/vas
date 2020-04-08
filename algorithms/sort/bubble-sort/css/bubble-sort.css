@@ -1,7 +1,8 @@
-*{
-	margin: 0 ;
+* {
+	margin: 0;
 	padding: 0;
 }
+
 .main {
 	width: 100%;
 	height: 100vmin;
@@ -14,11 +15,13 @@
 	background-color: #ffffe6;
 	position: relative;
 }
-.ct-wrap{
+
+.ct-wrap {
 	width: 100%;
 	height: 20%;
 	background-color: bisque;
 }
+
 .cell {
 	transition: 0.5s;
 	position: absolute;
@@ -39,46 +42,54 @@
 .cell1 {
 	height: 30vmin;
 	background-color: #D11717;
+	z-index: 18;
 
 }
 
 .cell2 {
 	height: 35vmin;
 	background-color: #D18717;
+	z-index: 17;
 }
 
 .cell3 {
 	height: 40vmin;
 	background-color: #D6E319;
+	z-index: 16;
 }
 
 .cell4 {
 	height: 45vmin;
 	background-color: #66E319;
+	z-index: 15;
 }
 
 .cell5 {
 	height: 50vmin;
 	background-color: #19E3B4;
+	z-index: 14;
 }
 
 .cell6 {
 	height: 55vmin;
-	background-color: #46BF7E;
+	background-color: #469FBF;
+	z-index: 13;
 }
 
 .cell7 {
 	height: 60vmin;
-	background-color: #469FBF;
+	background-color: #426FA6;
+	z-index: 12;
 }
 
 .cell8 {
 	height: 65vmin;
-	background-color: #426FA6;
-
+	background-color: #4642A6;
+	z-index: 11;
 }
 
 .cell9 {
 	height: 70vmin;
-	background-color: #4642A6;
+	background-color:#4c0f82;
+	z-index: 10;
 }
