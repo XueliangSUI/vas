@@ -38,8 +38,9 @@
 			</div>
 			
 			<div class="ct-wrap">
-				<button type="button" @click="autoNextStep">自动</button>
-				<button type="button" @click="nextStep">下一步</button>
+				<div type="button" class="button button-auto" @click="autoNextStep">自动</div>
+				<div type="button" class="button button-next" @click="nextStep">下一步</div>
+				<div type="button" class="button button-reset" @click="reset">重置</div>
 			</div>
 		</div>
 	</body>

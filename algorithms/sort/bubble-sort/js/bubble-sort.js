@@ -36,12 +36,22 @@ var app = new Vue({
 		},
 		// 自动演示
 		autoNextStep() {
-			var int = self.setInterval(() => {
+			 timer = self.setInterval(() => {
 				this.nextStep()
 				if (sortStepNum > 36) {
-					window.clearInterval(int)
+					window.clearInterval(timer)
 				}
 			}, 1000)
+		},
+		// 重置演示
+		reset(){
+			// 初始化排序
+			initCells()
+			// 如果计时器存在，清除计时器
+			try{
+				window.clearInterval(timer)
+			}catch(e){}
+			
 		}
 	}
 })

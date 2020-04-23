@@ -2,7 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
-
+body{
+	background-color: white;
+}
 .main {
 	width: 100%;
 	height: 100vmin;
@@ -10,16 +12,47 @@
 
 .an-wrap {
 	margin: 0 auto;
-	width: 100%;
+	width: 100vmin;
 	height: 80%;
-	background-color: #ffffe6;
+	/* background-color: #ffffe6; */
 	position: relative;
 }
 
 .ct-wrap {
-	width: 100%;
-	height: 20%;
-	background-color: bisque;
+	width: 100vmin;
+	margin: 5% auto;
+	height: 10%;
+	/* background-color: bisque; */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.ct-wrap .button {
+	text-align: center;
+	line-height: 8vmin;
+	font-size: 3vmin;
+	color: white;
+	width: 20vmin;
+	height: 8vmin;
+	border-radius: 1vmin;
+	border: none;
+}
+
+.ct-wrap .button:active {
+	opacity: 0.7;
+}
+
+.ct-wrap .button-auto {
+	background-color: #409EFF;
+}
+
+.ct-wrap .button-next {
+	background-color: #85CE61;
+}
+
+.ct-wrap .button-reset {
+	background-color: darkorange;
 }
 
 .cell {
@@ -90,6 +123,6 @@
 
 .cell9 {
 	height: 70vmin;
-	background-color:#4c0f82;
+	background-color: #4c0f82;
 	z-index: 10;
 }
