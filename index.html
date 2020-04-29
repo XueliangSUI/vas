@@ -3,43 +3,37 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/github-markdown.css" />
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- md转HTML工具 -->
+		<script src="./node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
+
 	</head>
 	<body>
 		<div id="app">
-
-			<iframe :src="algorithmsSrc" class="algorithms-class"></iframe>
+			<nav class="nav">
+<div class="nav-list-lv1">
+	<div class="nav-list-lv1-title">
+		
+	</div>
+	<div class="nav-list-lv1-content">
+		<div class="nav-list-lv2">
+			<div class="nav-list-lv3">
+				
+			</div>
 		</div>
+	</div>
+	
+</div>
+			</nav>
+			<div class="anmwrap " id="anmwrap">
+				<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class"></iframe>
+			</div>
 
+		</div>
 	</body>
-	<script type="text/javascript">
-		var app = new Vue({
-			el: '#app',
-			data() {
-				return {
-					a: 1,
-					algorithmsSrc: "./algorithms/sort/bubble-sort/index.html"
-				}
-			},
-			created: function() {
-
-			}
-		})
-	</script>
-	<style type="text/css">
-		#app {
-			position: relative;
-			width: 100%;
-			height: 100%;
-		}
-
-		.algorithms-class {
-			display: block;
-			margin: 0 auto;
-			border: none;
-			background-color: #aaa;
-			width: 90vmin;
-			height: 90vmin;
-		}
-	</style>
+	<script src="./js/vasmain.js" type="text/javascript" charset="utf-8"></script>
+	
 </html>

@@ -2,11 +2,13 @@
 	margin: 0;
 	padding: 0;
 }
-body{
+
+body {
 	background-color: white;
 }
+
 .main {
-	width: 100%;
+	width: 100vmin;
 	height: 100vmin;
 }
 
@@ -44,14 +46,51 @@ body{
 }
 
 .ct-wrap .button-auto {
-	background-color: #409EFF;
+	cursor: pointer;
+	background-color: rgba(64,158,255,0.8);
 }
 
 .ct-wrap .button-next {
-	background-color: #85CE61;
+	box-shadow: 0 1vmin 2vmin #ccc;
+	transition: 0.4s;
+	cursor: pointer;
+	background-color: rgba(133, 206, 97, 0.);
+	position: relative;
+	overflow: hidden;
+	top: 0;
 }
 
+.button-next:hover{
+	position: relative;
+	top: -0.5vmin;
+	box-shadow: 0 1.5vmin 2vmin #bbb;
+}
+
+.button-next:before {
+	transition: 0.4s;
+	position: absolute;
+	bottom: -26vmin;
+	left: -26vmin;
+	content: "";
+	background-color: rgba(133, 206, 97, 1);
+	width: 30vmin;
+	height: 30vmin;
+	border-radius: 15vmin;
+	z-index: -1;
+}
+
+.button-next:hover:before {
+	position: absolute;
+	bottom: -15vmin;
+	left: -5vmin;
+	width: 30vmin;
+	height: 30vmin;
+}
+
+
+
 .ct-wrap .button-reset {
+	cursor: pointer;
 	background-color: darkorange;
 }
 

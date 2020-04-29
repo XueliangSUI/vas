@@ -32,19 +32,32 @@
 				<div id="cell2" class="cell cell2">
 					<p>2</p>
 				</div>
-				<div id="cell1" class="cell cell1" >
+				<div id="cell1" class="cell cell1">
 					<p>1</p>
 				</div>
 			</div>
-			
+
 			<div class="ct-wrap">
-				<div type="button" class="button button-auto" @click="autoNextStep">自动</div>
-				<div type="button" class="button button-next" @click="nextStep">下一步</div>
-				<div type="button" class="button button-reset" @click="reset">重置</div>
+				<div type="button" class="button-blue" @click="autoNextStep">
+					<div class="">
+						自动
+					</div>
+				</div>
+				<div type="button" class="button-red" @click="nextStep">
+					<div class="">
+						下一步
+					</div>
+				</div>
+				<div type="button" class="button-orange" @click="reset">
+					<div class="">
+						重置
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
-	<link rel="stylesheet" type="text/css" href="./css/bubble-sort.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/bubble-sort.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
 	<script type="text/javascript" src="./js/bubble-sort.js"></script>
-	
+
 </html>

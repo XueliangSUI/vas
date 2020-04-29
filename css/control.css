@@ -1,0 +1,179 @@
+.button-blue {
+	text-align: center;
+	line-height: 8vmin;
+	font-size: 3vmin;
+	color: white;
+	width: 20vmin;
+	height: 8vmin;
+	border-radius: 1vmin;
+	border: none;
+	box-shadow: 0 1vmin 2vmin #ccc;
+	cursor: pointer;
+	background-color: rgba(64,158,255,0.8);
+	position: relative;
+	overflow: hidden;
+	top: 0;
+	transition: 0.4s;
+}
+
+.button-blue:hover {
+	position: relative;
+	top: -0.5vmin;
+	box-shadow: 0 1.5vmin 2vmin #bbb;
+}
+
+.button-blue:before {
+	transition: 0.4s;
+	position: absolute;
+	bottom: -26vmin;
+	left: -26vmin;
+	content: "";
+	background-color: rgba(64,158,255,1);
+	width: 30vmin;
+	height: 30vmin;
+	border-radius: 15vmin;
+	z-index: -1;
+}
+
+.button-blue:hover:before {
+	position: absolute;
+	bottom: -15vmin;
+	left: -5vmin;
+	width: 30vmin;
+	height: 30vmin;
+}
+
+.button-green {
+	text-align: center;
+	line-height: 8vmin;
+	font-size: 3vmin;
+	color: white;
+	width: 20vmin;
+	height: 8vmin;
+	border-radius: 1vmin;
+	border: none;
+	box-shadow: 0 1vmin 2vmin #ccc;
+	cursor: pointer;
+	background-color: rgba(133, 206, 97, 0.8);
+	position: relative;
+	overflow: hidden;
+	top: 0;
+	transition: 0.4s;
+}
+
+.button-green:hover {
+	position: relative;
+	top: -0.5vmin;
+	box-shadow: 0 1.5vmin 2vmin #bbb;
+}
+
+.button-green:before {
+	transition: 0.4s;
+	position: absolute;
+	bottom: -26vmin;
+	left: -26vmin;
+	content: "";
+	background-color: rgba(133, 206, 97, 1);
+	width: 30vmin;
+	height: 30vmin;
+	border-radius: 15vmin;
+	z-index: -1;
+}
+
+.button-green:hover:before {
+	position: absolute;
+	bottom: -15vmin;
+	left: -5vmin;
+	width: 30vmin;
+	height: 30vmin;
+}
+
+.button-orange {
+	text-align: center;
+	line-height: 8vmin;
+	font-size: 3vmin;
+	color: white;
+	width: 20vmin;
+	height: 8vmin;
+	border-radius: 1vmin;
+	border: none;
+	box-shadow: 0 1vmin 2vmin #ccc;
+	cursor: pointer;
+	background-color: rgba(	255, 140, 0, 0.8);
+	position: relative;
+	overflow: hidden;
+	top: 0;
+	transition: 0.4s;
+}
+
+.button-orange:hover {
+	position: relative;
+	top: -0.5vmin;
+	box-shadow: 0 1.5vmin 2vmin #bbb;
+}
+
+.button-orange:before {
+	transition: 0.4s;
+	position: absolute;
+	bottom: -26vmin;
+	left: -26vmin;
+	content: "";
+	background-color: rgba(	255, 140, 0, 1);
+	width: 30vmin;
+	height: 30vmin;
+	border-radius: 15vmin;
+	z-index: -1;
+}
+
+.button-orange:hover:before {
+	position: absolute;
+	bottom: -15vmin;
+	left: -5vmin;
+	width: 30vmin;
+	height: 30vmin;
+}
+
+.button-red {
+	text-align: center;
+	line-height: 8vmin;
+	font-size: 3vmin;
+	color: white;
+	width: 20vmin;
+	height: 8vmin;
+	border-radius: 1vmin;
+	border: none;
+	box-shadow: 0 1vmin 2vmin #ccc;
+	cursor: pointer;
+	background-color: rgba(234, 32, 39,0.8);
+	position: relative;
+	overflow: hidden;
+	top: 0;
+	transition: 0.4s;
+}
+
+.button-red:hover {
+	position: relative;
+	top: -0.5vmin;
+	box-shadow: 0 1.5vmin 2vmin #bbb;
+}
+
+.button-red:before {
+	transition: 0.4s;
+	position: absolute;
+	bottom: -26vmin;
+	left: -26vmin;
+	content: "";
+	background-color: rgba(234, 32, 39,1.0);
+	width: 30vmin;
+	height: 30vmin;
+	border-radius: 15vmin;
+	z-index: -1;
+}
+
+.button-red:hover:before {
+	position: absolute;
+	bottom: -15vmin;
+	left: -5vmin;
+	width: 30vmin;
+	height: 30vmin;
+}
