@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/github-markdown.css" />
-		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
-		<script src="./js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
-		<!-- md转HTML工具 -->
-		<script src="./node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/github-markdown.css" />
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<!-- md转HTML工具 -->
+	<script src="./node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
 
 
-	</head>
-	<body>
-		<div id="app">
-			<nav class="nav">
-<div class="nav-list-lv1">
-	<div class="nav-list-lv1-title">
-		
-	</div>
-	<div class="nav-list-lv1-content">
-		<div class="nav-list-lv2">
-			<div class="nav-list-lv3">
-				
+</head>
+
+<body>
+	<div id="app">
+		<nav class="nav">
+			<div class="nav-list-lv1">
+				<div class="nav-list-lv1-title">
+
+				</div>
+				<div class="nav-list-lv1-content">
+					<div class="nav-list-lv2">
+						<div class="nav-list-lv2-title">
+
+						</div>
+						<div class="nav-list-lv2-content">
+							<div class="nav-list-lv3">
+								<div class="nav-list-lv2-title">
+
+								</div>
+								<div class="nav-list-lv2-content">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+		</nav>
+		<div class="anmwrap " id="anmwrap">
+			<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class"></iframe>
 		</div>
-	</div>
-	
-</div>
-			</nav>
-			<div class="anmwrap " id="anmwrap">
-				<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class"></iframe>
-			</div>
 
-		</div>
-	</body>
-	<script src="./js/vasmain.js" type="text/javascript" charset="utf-8"></script>
-	
+	</div>
+</body>
+<script src="./js/vasmain.js" type="text/javascript" charset="utf-8"></script>
+
 </html>
