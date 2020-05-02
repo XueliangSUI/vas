@@ -19,7 +19,7 @@
 .button-blue:hover {
 	position: relative;
 	top: -0.5vmin;
-	box-shadow: 0 1.5vmin 2vmin #bbb;
+	box-shadow: 0 1.5vmin 3vmin #aaa;
 }
 
 .button-blue:before {
@@ -64,7 +64,7 @@
 .button-green:hover {
 	position: relative;
 	top: -0.5vmin;
-	box-shadow: 0 1.5vmin 2vmin #bbb;
+	box-shadow: 0 1.5vmin 3vmin #aaa;
 }
 
 .button-green:before {
@@ -109,7 +109,7 @@
 .button-orange:hover {
 	position: relative;
 	top: -0.5vmin;
-	box-shadow: 0 1.5vmin 2vmin #bbb;
+	box-shadow: 0 1.5vmin 3vmin #aaa;
 }
 
 .button-orange:before {
@@ -154,7 +154,7 @@
 .button-red:hover {
 	position: relative;
 	top: -0.5vmin;
-	box-shadow: 0 1.5vmin 2vmin #bbb;
+	box-shadow: 0 1.5vmin 3vmin #aaa;
 }
 
 .button-red:before {

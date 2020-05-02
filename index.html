@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8" />
-	<title></title>
-	<link rel="stylesheet" href="./css/main.css" />
-	<link rel="stylesheet" href="./css/github-markdown.css" />
-	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
-	<script src="./js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
-	<!-- md转HTML工具 -->
-	<script src="./node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
-
-
-</head>
-
-<body>
-	<div id="app">
-		<nav class="nav">
-			<div class="nav-list-lv1">
-				<div class="nav-list-lv1-title">
-
-				</div>
-				<div class="nav-list-lv1-content">
-					<div class="nav-list-lv2">
-						<div class="nav-list-lv2-title">
-
-						</div>
-						<div class="nav-list-lv2-content">
-							<div class="nav-list-lv3">
-								<div class="nav-list-lv2-title">
-
-								</div>
-								<div class="nav-list-lv2-content">
-
+	<head>
+		<meta charset="utf-8" />
+		<title>数据结构算法可视化学习系统（VAS)</title>
+		<!-- 首页样式文件 -->
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- md样式文件 -->
+		<link rel="stylesheet" href="./css/github-markdown.css" />
+		<!-- 引入vue框架v2.6.10 -->
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入jQuery框架v3.4.1 -->
+		<script src="./js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- md文档转HTML格式工具 -->
+		<script src="./node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 侧边导航栏 -->
+			<nav class="nav">
+				<div class="nav-list-lv1" v-for="lv1 in navList">
+					<div class="nav-list-lv1-title" @click="clickNavListTitle(lv1.algorithmSrc,lv1.mdSrc)">
+						{{lv1.title}}
+					</div>
+					<div class="nav-list-lv1-content" v-if="lv1.content">
+						<div class="nav-list-lv2" v-for="lv2 in lv1.content">
+							<div class="nav-list-lv2-title" @click="clickNavListTitle(lv2.algorithmSrc,lv2.mdSrc)">
+								{{lv2.title}}
+							</div>
+							<div class="nav-list-lv2-content" v-if="lv2.content">
+								<div class="nav-list-lv3" v-for="lv3 in lv2.content">
+									
+										<div class="nav-list-lv3-title" @click="clickNavListTitle(lv3.algorithmSrc,lv3.mdSrc)">
+											{{lv3.title}}
+										</div>
+									
+									<div class="nav-list-lv3-content" v-if="lv3.content">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
-
+			</nav>
+			<!-- 动画和md容器 -->
+			<div class="anmwrap" id="anmwrap">
+				<!-- md版块 -->
+				<div class='markdown-body' id="mdBody"></div>
+				<!-- 引入动画的链接版块 -->
+				<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class" id="algorithmsId"></iframe>
 			</div>
-		</nav>
-		<div class="anmwrap " id="anmwrap">
-			<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class"></iframe>
 		</div>
-
-	</div>
-</body>
-<script src="./js/vasmain.js" type="text/javascript" charset="utf-8"></script>
-
+	</body>
+	<!-- 引入首页js -->
+	<script src="./js/vasmain.js" type="text/javascript" charset="utf-8"></script>
 </html>

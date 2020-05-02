@@ -8,6 +8,19 @@ body {
 	height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+/*正常的未被访问过的链接*/
+a:link {
+    text-decoration: none;
+}
+/*已经访问过的链接*/
+a:visited {
+    text-decoration: none;
+}
+
 #app {
 
 	position: relative;
@@ -65,15 +78,6 @@ body {
 }
 
 
-
-/* pre标签换行 */
-/* .anmwrap pre {
-	margin: 0 10vmin;
-	white-space: pre-wrap !important;
-	word-wrap: break-word !important;
-	*white-space: normal !important;
-} */
-
 .algorithms-class {
 	display: block;
 	margin: 0 auto;
@@ -82,4 +86,40 @@ body {
 	width: 90vmin;
 	height: 90vmin;
 }
+/**
+ * 导航栏列表样式
+ */
+.nav-list-lv1-title{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #000000;
+}
+.nav-list-lv1-content{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #000000;
+}
 
+.nav-list-lv2-title{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #aaa;
+}
+
+.nav-list-lv2-content{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #aaa;
+}
+
+.nav-list-lv3-title{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #eee;
+}
+
+.nav-list-lv3-content{
+	width: 90%;
+	margin: 10px auto;
+	border:1px solid #eee;
+}
