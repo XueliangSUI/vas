@@ -76,6 +76,7 @@ var app = new Vue({
 				// 如果仅存在动画版块：显示它，跳转到动画版块id，并隐藏md版块
 			} else if (!mdSrc && !algorithmSrc) {
 				// 如果既不存在md版块，也不存在动画版块，则什么也不做
+				
 			}
 
 		}
