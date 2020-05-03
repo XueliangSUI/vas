@@ -9,17 +9,18 @@ body {
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /*正常的未被访问过的链接*/
-a:link {
-    text-decoration: none;
-}
+/* a:link {
+	text-decoration: none;
+} */
+
 /*已经访问过的链接*/
-a:visited {
-    text-decoration: none;
-}
+/* a:visited {
+	text-decoration: none;
+} */
 
 #app {
 
@@ -57,10 +58,9 @@ a:visited {
 
 /*滚动条整体样式*/
 ::-webkit-scrollbar {
-
-	width: 2vmin;
+	width: 0.5vmin;
 	/*高宽分别对应横竖滚动条的尺寸*/
-	height: 2vmin;
+	height: 0.5vmin;
 }
 
 /*滚动条里面小方块*/
@@ -75,8 +75,15 @@ a:visited {
 		rgba(255, 255, 255, 0.2) 75%,
 		transparent 75%,
 		transparent);
+	transition: 0.5s;
+	opacity: 0;
 }
 
+/* hover有效但是过渡无效 */
+/* .anmwrap:hover::-webkit-scrollbar {
+	background-color: red;
+	opacity: 1;
+} */
 
 .algorithms-class {
 	display: block;
@@ -86,40 +93,73 @@ a:visited {
 	width: 90vmin;
 	height: 90vmin;
 }
+
 /**
  * 导航栏列表样式
  */
-.nav-list-lv1-title{
-	width: 90%;
+.nav-list-lv1 {
 	margin: 10px auto;
-	border:1px solid #000000;
-}
-.nav-list-lv1-content{
-	width: 90%;
-	margin: 10px auto;
-	border:1px solid #000000;
 }
 
-.nav-list-lv2-title{
+.nav-list-lv1-title {
 	width: 90%;
-	margin: 10px auto;
-	border:1px solid #aaa;
+	margin: 0px auto;
+	border: 1px solid #000000;
+	user-select: none;
 }
 
-.nav-list-lv2-content{
+.nav-list-lv1-content {
 	width: 90%;
-	margin: 10px auto;
-	border:1px solid #aaa;
+	margin: 0px auto;
+	overflow: hidden;
 }
 
-.nav-list-lv3-title{
-	width: 90%;
+.nav-list-lv2 {
 	margin: 10px auto;
-	border:1px solid #eee;
 }
 
-.nav-list-lv3-content{
+.nav-list-lv2-title {
 	width: 90%;
+	margin: 0px auto;
+	border: 1px solid #aaa;
+	user-select: none;
+}
+
+.nav-list-lv2-content {
+	transition: 0.5s;
+	width: 90%;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.nav-list-lv3 {
 	margin: 10px auto;
-	border:1px solid #eee;
+}
+
+.nav-list-lv3-title {
+	width: 90%;
+	margin: 0px auto;
+	border: 1px solid #eee;
+	user-select: none;
+}
+
+.nav-list-lv3-content {
+	transition: 0.5s;
+	width: 90%;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+/* 列表内容隐藏和显示 */
+.list-height-0 {
+	max-height: 0px;
+	transition: max-height cubic-bezier(0, 1, 0, 1) 0.2s;
+	/* background-color: red; */
+	/* transition: 0.5s; */
+}
+
+.list-height-auto {
+	transition: max-height cubic-bezier(1, 0, 1, 0) 0.2s;
+	max-height: 2000px;
+
 }

@@ -2,21 +2,25 @@ var app = new Vue({
 	el: '#app',
 	data() {
 		return {
+			// 控制md和动画版块的显示或隐藏
+			ifMdBodyShow: true,
+			ifAnmShow: false,
+			// 导航列表对象
 			navList: [{
 				title: "开发阶段声明",
-				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
-				fold: ""
+				algorithmSrc: "",
+				mdSrc: "./VAS开发文档.md",
+				fold: true
 			}, {
-				title: "数据结构/经典算法",
+				title: "数据结构常用算法",
 				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
 				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
-				fold: "",
+				fold: true,
 				content: [{
 					title: "排序",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
-					fold: "",
+					// algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					mdSrc: "./algorithms/sort/introduce.md",
+					fold: true,
 					content: [{
 						title: "冒泡排序",
 						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
@@ -24,20 +28,92 @@ var app = new Vue({
 						// fold: ""
 					}, {
 						title: "选择排序",
+						algorithmSrc: "./algorithms/sort/choose-sort/index.html",
+						mdSrc: "./algorithms/sort/choose-sort/introduce.md"
+						// fold: ""
+					}]
+				}, {
+					title: "查找",
+					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					fold: true,
+					content: [{
+						title: "顺序查找",
 						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md"
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: ""
+					}, {
+						title: "二分查找",
+						algorithmSrc: "./algorithms/sort/choose-sort/index.html",
+						mdSrc: "./algorithms/sort/choose-sort/introduce.md"
 						// fold: ""
 					}]
 				}, {
 					title: "图论",
 					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
 					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
-					fold: ""
+					fold: true
 				}]
 			}, {
-				title: "扩展算法"
+				title: "扩展算法",
+				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+				fold: true,
+				content: [{
+					title: "迷宫",
+					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					fold: true,
+					content: [{
+						title: "迷宫生成1",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}, {
+						title: "迷宫生成2",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}, {
+						title: "迷宫寻路",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}]
+				}, {
+					title: "思维扩展",
+					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					fold: true,
+					content: [{
+						title: "生命游戏",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}]
+				}]
 			}, {
-				title: "其他"
+				title: "其他",
+				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+				fold: true,
+				content: [{
+					title: "项目相关",
+					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					fold: true,
+					content: [{
+						title: "项目总结",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}, {
+						title: "开发者",
+						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						// fold: true
+					}]
+				}]
 			}],
 			aaaa: "aaa",
 			algorithmsSrc: "./algorithms/sort/bubble-sort/index.html"
@@ -45,6 +121,12 @@ var app = new Vue({
 	},
 	mounted: function() {
 		// this.mdToHtml()
+		this.clickNavListTitle({
+			title: "开发阶段声明",
+			algorithmSrc: "",
+			mdSrc: "./VAS开发文档.md",
+			fold: true
+		}, 0)
 	},
 	methods: {
 		/**
@@ -62,23 +144,63 @@ var app = new Vue({
 		 * 导航栏标题点击事件，用于弹出抽屉和跳转md文档及动画
 		 * @param {Object} algorithmSrc
 		 * @param {Object} mdSrc
+		 * @param {Object} fold
 		 */
-		clickNavListTitle: function(algorithmSrc, mdSrc) {
+		clickNavListTitle: function(lv, index1, index2, index3) {
+			// 控制目录折叠展开
+			if (index3 != undefined) {
+				// 存在index3
+				// 截止2020/5/3版本，暂时不存在【三级目录下还有内容】的情况
+				if (this.navList[index1].content[index2].content[index3].fold == true) {
+					this.navList[index1].content[index2].content[index3].fold = false
+				} else if (this.navList[index1].content[index2].content[index3].fold == false) {
+					this.navList[index1].content[index2].content[index3].fold = true
+				}
+			} else if (index2 != undefined) {
+				console.log(lv, index1, index2, this.navList[index1].content[index2])
+				// 存在index2
+				if (this.navList[index1].content[index2].fold == true) {
+					this.navList[index1].content[index2].fold = false
+				} else if (this.navList[index1].content[index2].fold == false) {
+					this.navList[index1].content[index2].fold = true
+				}
 
-			if (mdSrc && algorithmSrc) {
-				// 如果存在md说明文档，且存在动画内容：显示它们，并跳转到动画版块id
-				this.mdToHtml(mdSrc)
-				window.location.hash = "#algorithmsId";
-			} else if (mdSrc) {
-				// 如果仅存在md说明文档：显示它，跳转到md版块id，并隐藏动画版块
-				$("#mdBody").html(this.mdToHtml(mdSrc));
-			} else if (algorithmSrc) {
-				// 如果仅存在动画版块：显示它，跳转到动画版块id，并隐藏md版块
-			} else if (!mdSrc && !algorithmSrc) {
-				// 如果既不存在md版块，也不存在动画版块，则什么也不做
-				
+			} else if (index1 != undefined) {
+				// 存在index1
+				if (this.navList[index1].fold == true) {
+					this.navList[index1].fold = false
+				} else if (this.navList[index1].fold == false) {
+					this.navList[index1].fold = true
+				}
 			}
 
+			// console.log(this.navList)
+
+
+			if (lv.mdSrc && lv.algorithmSrc) {
+				// 如果存在md说明文档，且存在动画内容：显示它们
+				this.ifMdBodyShow = true
+				this.ifAnmShow = true
+				this.mdToHtml(lv.mdSrc)
+				// window.location.hash = "#algorithmsId";
+			} else if (lv.mdSrc) {
+				// 如果仅存在md说明文档：显示它，跳转到md版块id，并隐藏动画版块
+				this.ifMdBodyShow = true
+				this.ifAnmShow = false
+				$("#mdBody").html(this.mdToHtml(lv.mdSrc));
+			} else if (lv.algorithmSrc) {
+				// 如果仅存在动画版块：显示它，跳转到动画版块id，并隐藏md版块
+				this.ifMdBodyShow = false
+				this.ifAnmShow = true
+			} else if (!lv.mdSrc && !lv.algorithmSrc) {
+				// 如果既不存在md版块，也不存在动画版块，则什么也不做
+				// 不隐藏md和动画
+			}
+
+		},
+
+		anmwrapScrolling: function() {
+			// document.getElementById("anmwrap").style.scrollbar
 		}
 	}
 })

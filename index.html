@@ -18,23 +18,23 @@
 		<div id="app">
 			<!-- 侧边导航栏 -->
 			<nav class="nav">
-				<div class="nav-list-lv1" v-for="lv1 in navList">
-					<div class="nav-list-lv1-title" @click="clickNavListTitle(lv1.algorithmSrc,lv1.mdSrc)">
+				<div class="nav-list-lv1" v-for="(lv1,index1) in navList">
+					<div class="nav-list-lv1-title" @click="clickNavListTitle(lv1,index1)">
 						{{lv1.title}}
 					</div>
-					<div class="nav-list-lv1-content" v-if="lv1.content">
-						<div class="nav-list-lv2" v-for="lv2 in lv1.content">
-							<div class="nav-list-lv2-title" @click="clickNavListTitle(lv2.algorithmSrc,lv2.mdSrc)">
+					<div class="nav-list-lv1-content" :class="{'list-height-0':lv1.fold,'list-height-auto':!lv1.fold}" v-if="lv1.content">
+						<div class="nav-list-lv2" v-for="(lv2,index2) in lv1.content">
+							<div class="nav-list-lv2-title" @click="clickNavListTitle(lv2,index1,index2)">
 								{{lv2.title}}
 							</div>
-							<div class="nav-list-lv2-content" v-if="lv2.content">
-								<div class="nav-list-lv3" v-for="lv3 in lv2.content">
+							<div class="nav-list-lv2-content" :class="{'list-height-0':lv2.fold,'list-height-auto':!lv2.fold}" v-if="lv2.content">
+								<div class="nav-list-lv3" v-for="(lv3,index3) in lv2.content">
 									
-										<div class="nav-list-lv3-title" @click="clickNavListTitle(lv3.algorithmSrc,lv3.mdSrc)">
+										<div class="nav-list-lv3-title" @click="clickNavListTitle(lv3,index1,index2,index3)">
 											{{lv3.title}}
 										</div>
 									
-									<div class="nav-list-lv3-content" v-if="lv3.content">
+									<div class="nav-list-lv3-content" :class="{'list-height-0':lv3.fold,'list-height-auto':!lv3.fold}" v-if="lv3.content">
 									</div>
 								</div>
 							</div>
@@ -44,11 +44,11 @@
 				</div>
 			</nav>
 			<!-- 动画和md容器 -->
-			<div class="anmwrap" id="anmwrap">
+			<div class="anmwrap" id="anmwrap" >
 				<!-- md版块 -->
-				<div class='markdown-body' id="mdBody"></div>
+				<div class='markdown-body' id="mdBody" v-show="ifMdBodyShow"></div>
 				<!-- 引入动画的链接版块 -->
-				<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class" id="algorithmsId"></iframe>
+				<iframe :src="algorithmsSrc" scrolling="no" class="algorithms-class" id="algorithmsId" v-show="ifAnmShow"></iframe>
 			</div>
 		</div>
 	</body>

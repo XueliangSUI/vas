@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	/* 动画内文字不可选中 */
+	user-select:none;
+}
 .button-blue {
 	text-align: center;
 	line-height: 8vmin;

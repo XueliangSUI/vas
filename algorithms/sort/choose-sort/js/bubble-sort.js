@@ -6,9 +6,8 @@ var data = {
 var app = new Vue({
 	el: '#app',
 	data: data,
-	mounted: function() {
+	created: function() {
 		initCells()
-
 	},
 	methods: {
 		// 点击下一步按钮触发
@@ -17,8 +16,6 @@ var app = new Vue({
 			sortStepNum++
 			// 判断排序是否完成
 			if (sortStepNum > 36) {
-				// 设置自动播放按钮文字为【自动】
-				document.getElementById("autoNextStep").innerText = "自动"
 				alert("排序完成")
 				return
 			}
@@ -27,45 +24,34 @@ var app = new Vue({
 			console.log(thisTurnSortStepNum)
 			// 比较两个cell的动画
 			compareCellsAnimation(cellsList[thisTurnSortStepNum - 1].order, cellsList[thisTurnSortStepNum].order)
-			setTimeout(() => {
+			setTimeout(()=>{
 				// 判断是否需要交换位置
 				if (cellsList[thisTurnSortStepNum - 1].no > cellsList[thisTurnSortStepNum].no) {
 					exchangeCells(cellsList[thisTurnSortStepNum - 1].order, cellsList[thisTurnSortStepNum].order)
 				}
 				// 每次比较后将cellsList按照order重新排序
 				sortForOrder()
-			}, 500)
-
+			},500)
+			
 		},
 		// 自动演示
 		autoNextStep() {
-
-			// 自动按钮文字切换暂停
-			if (document.getElementById("autoNextStep").innerText == "自动") {
-				// 当按钮文字为【自动】时，切换文字并开启计时器
-				document.getElementById("autoNextStep").innerText = "暂停"
-				timer = self.setInterval(() => {
-					this.nextStep()
-					if (sortStepNum > 36) {
-						window.clearInterval(timer)
-					}
-				}, 1000)
-			} else if (document.getElementById("autoNextStep").innerText == "暂停") {
-				// 当按钮文字为【暂停】时，切换文字并清除计时器
-				document.getElementById("autoNextStep").innerText = "自动"
-				window.clearInterval(timer)
-			}
-
+			 timer = self.setInterval(() => {
+				this.nextStep()
+				if (sortStepNum > 36) {
+					window.clearInterval(timer)
+				}
+			}, 1000)
 		},
 		// 重置演示
-		reset() {
+		reset(){
 			// 初始化排序
 			initCells()
 			// 如果计时器存在，清除计时器
-			try {
+			try{
 				window.clearInterval(timer)
-			} catch (e) {}
-
+			}catch(e){}
+			
 		}
 	}
 })
@@ -115,14 +101,12 @@ function initCells() {
  * 比较两个cell的动画
  */
 function compareCellsAnimation(frontCellNum, behindCellNum) {
-	cells[this.cellsList.length - this.cellsList[frontCellNum - 1].no].style.boxShadow =
-		"inset 0 -100vmin rgba(255,255,255,0.7)"
-	cells[this.cellsList.length - this.cellsList[behindCellNum - 1].no].style.boxShadow =
-		"inset 0 -100vmin rgba(255,255,255,0.7)"
-	setTimeout(() => {
+	cells[this.cellsList.length - this.cellsList[frontCellNum - 1].no].style.boxShadow = "inset 0 -100vmin rgba(255,255,255,0.7)"
+	cells[this.cellsList.length - this.cellsList[behindCellNum - 1].no].style.boxShadow = "inset 0 -100vmin rgba(255,255,255,0.7)"
+	setTimeout(()=>{
 		cells[this.cellsList.length - this.cellsList[frontCellNum - 1].no].style.boxShadow = "none"
 		cells[this.cellsList.length - this.cellsList[behindCellNum - 1].no].style.boxShadow = "none"
-	}, 500)
+	},500)
 }
 
 /**
