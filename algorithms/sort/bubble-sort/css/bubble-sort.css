@@ -1,35 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-color: white;
-}
-
-.main {
-	width: 100vmin;
-	height: 100vmin;
-}
-
-.an-wrap {
-	margin: 0 auto;
-	width: 100vmin;
-	height: 80%;
-	/* background-color: #ffffe6; */
-	position: relative;
-}
-
-.ct-wrap {
-	width: 100vmin;
-	margin: 5% auto;
-	height: 10%;
-	/* background-color: bisque; */
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
+/* 
 .ct-wrap .button {
 	text-align: center;
 	line-height: 8vmin;
@@ -92,7 +61,7 @@ body {
 .ct-wrap .button-reset {
 	cursor: pointer;
 	background-color: darkorange;
-}
+} */
 
 .cell {
 	transition: 0.5s;

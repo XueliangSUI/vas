@@ -36,9 +36,11 @@ a {
 .nav {
 	height: 90%;
 	width: 20%;
+	overflow-y: scroll;
 	border-radius: 1vmin;
 	background-color: white;
 	box-shadow: 0vmin 0vmin 3vmin #aaa;
+	
 }
 
 .anmwrap {
