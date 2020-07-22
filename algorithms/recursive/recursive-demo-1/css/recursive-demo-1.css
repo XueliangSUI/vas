@@ -1,0 +1,157 @@
+.border {
+	border: 0.0625rem solid black;
+	margin: 0 auto;
+}
+
+
+
+.code_flex_wrap {
+	height: 40vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.language_type{
+	text-align: center;
+	font-size: 2vmin;
+	color: #999;
+	margin: 0vmin auto 1vmin auto;
+}
+.code_row {
+	/* margin: 1vmin; */
+	transition: background-color 0.3s; 
+	line-height: 6vmin;
+}
+
+.code_block {
+	padding: 2vmin;
+	font-weight: 800;
+	user-select: text;
+	font-size: 3vmin;
+	background-color: #f1f1f1;
+}
+
+.code_blue {
+	color: #0000C0;
+}
+
+.code_green {
+	color: #55aa00;
+}
+
+.code_black {
+	color: #555;
+}
+
+.code_purple {
+	color: #aa55ff;
+}
+
+.line_running {
+	transition: background-color 0.1s; 
+	background-color: #fff;
+	/* box-shadow: 0 0 1vmin 0 #ddd; */
+}
+
+.code_indent {
+	text-indent: 4vmin;
+}
+
+
+.code_display {}
+
+.code_display_none {
+	display: none;
+}
+
+
+.canteen{
+	margin: 2.5vmin auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 35vmin;
+	width: 90%;
+	box-shadow: 0 0vmin 1vmin 1vmin #f1f1f1;
+	border-radius: 3vmin;
+}
+
+.canteen_title{
+	text-shadow: 0 1vmin 1vmin #ddd;
+	text-align: center;
+	font-size: 4vmin;
+	font-weight: 800;
+	color: #777;
+}
+
+
+.windows_line {
+	width: 90%;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+.window_wrap {
+	position: relative;
+	width: 7vmin;
+	height: 7vmin;
+	/* border: 0.1vmin solid red; */
+	border-radius: 1vmin;
+	box-shadow: 0 0 1vmin 0 #aaa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.window_num {
+	font-size: 3vmin;
+	font-weight: 800;
+	color: #777;
+}
+
+.window_num_favourite {
+	color: red;
+}
+
+.xiaoHong {
+	position: absolute;
+	top: -7vmin;
+}
+
+.xiaoHong .xiaoHong_outside {
+	width: 4vmin;
+	height: 4vmin;
+	border-radius: 2vmin;
+	background-color: #ff6365;
+	/* position: relative; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.xiaoHong .xiaoHong_inside {
+	width: 3vmin;
+	height: 3vmin;
+	border-radius: 1.5vmin;
+	/* background-color: white; */
+
+}
+
+.op0 {
+	transition: 0.2s;
+	opacity: 0;
+}
+
+.op1 {
+	transition: 0.2s;
+	opacity: 1;
+}
+.code_focus{
+		transition: color 0.5s;
+}
+.focus{
+	transition: color 0.5s;
+	color: red;
+}	

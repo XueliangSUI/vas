@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
+		<link rel="stylesheet" href="./css/recursive-demo-1.css" />
+		<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div id="app" class="main border">
+			<!-- 动画区域 -->
+			<div class="an-wrap">
+				<div class="">
+
+				</div>
+				<!-- 代码容器 -->
+				<div class="code_flex_wrap">
+					<!-- 文字描述 -->
+					<div class="code_block" v-if="languages[languageSelected]=='文字描述'">
+						<div class="language_type">
+							{{languages[languageSelected]}}
+						</div>
+						<div class="code_row" :class="{line_running:line1running}">
+							<span class="code_blue">
+								定义函数
+							</span>
+							<span class="code_black">
+								品尝
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								窗口号
+							</span>
+							<span class="code_green">
+								)
+							</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line2running}">
+							<span class="code_green">
+								如果
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								食堂该窗口下的食物好吃
+							</span>
+							<span class="code_green">
+								)
+								<span class="code_green">
+									返回
+								</span>
+								<span class="code_black">
+									窗口号
+								</span>
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line3running}">
+							<span class="code_green">
+								返回
+							</span>
+							<span class="code_black">
+								品尝
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								窗口号
+							</span>
+							<span class="code_blue">
+								+
+							</span>
+							<span class="code_purple">
+								1
+							</span>
+							<span class="code_green">
+								)
+
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row " :class="{line_running:line4running}">
+							<span class="code_green">
+								}
+							</span>
+						</div>
+						<div class="code_row " :class="{line_running:line5running}">
+							<span class="code_blue">
+								定义变量
+							</span>
+							<span class="code_black">
+								小红喜欢的窗口
+							</span>
+							<span class="code_green">
+								=
+							</span>
+							<span class="code_black" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								品尝
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								(
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:!getFavourite,code_display_none:getFavourite,focus:focus}">
+								{{winNum}}
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								)
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:getFavourite,code_display_none:!getFavourite,focus:focus}">
+								{{favouriteNum}}
+							</span>
+							<span class="code_green">
+								;
+							</span>
+						</div>
+					</div>
+					<!-- JavaScript -->
+					<div class="code_block" v-if="languages[languageSelected]=='JavaScript'">
+						<div class="language_type">
+							{{languages[languageSelected]}}
+						</div>
+						<div class="code_row" :class="{line_running:line1running}">
+							<span class="code_blue">
+								function
+							</span>
+							<span class="code_black">
+								taste
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								winNum
+							</span>
+							<span class="code_green">
+								)
+							</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line2running}">
+							<span class="code_green">
+								if
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								食堂该窗口下的食物好吃
+							</span>
+							<span class="code_green">
+								)
+								<span class="code_green">
+									return
+								</span>
+								<span class="code_black">
+									winNum
+								</span>
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line3running}">
+							<span class="code_green">
+								return
+							</span>
+							<span class="code_black">
+								taste
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								winNum
+							</span>
+							<span class="code_blue">
+								+
+							</span>
+							<span class="code_purple">
+								1
+							</span>
+							<span class="code_green">
+								)
+
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row " :class="{line_running:line4running}">
+							<span class="code_green">
+								}
+							</span>
+						</div>
+						<div class="code_row " :class="{line_running:line5running}">
+							<span class="code_blue">
+								var
+							</span>
+							<span class="code_black">
+								winLike
+							</span>
+							<span class="code_green">
+								=
+							</span>
+							<span class="code_black" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								taste
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								(
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:!getFavourite,code_display_none:getFavourite,focus:focus}">
+								{{winNum}}
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								)
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:getFavourite,code_display_none:!getFavourite,focus:focus}">
+								{{favouriteNum}}
+							</span>
+							<span class="code_green">
+								;
+							</span>
+						</div>
+					</div>
+					<!-- C语言 -->
+					<div class="code_block" v-if="languages[languageSelected]=='C语言'">
+						<div class="language_type">
+							{{languages[languageSelected]}}
+						</div>
+						<div class="code_row" :class="{line_running:line1running}">
+							<span class="code_blue">
+								int
+							</span>
+							<span class="code_black">
+								taste
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_green">
+								int
+							</span>
+							<span class="code_black">
+								winNum
+							</span>
+							<span class="code_green">
+								)
+							</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line2running}">
+							<span class="code_green">
+								if
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								食堂该窗口下的食物好吃
+							</span>
+							<span class="code_green">
+								)
+								<span class="code_green">
+									return
+								</span>
+								<span class="code_black">
+									winNum
+								</span>
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row code_indent" :class="{line_running:line3running}">
+							<span class="code_green">
+								return
+							</span>
+							<span class="code_black">
+								taste
+							</span>
+							<span class="code_green">
+								(
+							</span>
+							<span class="code_black">
+								winNum
+							</span>
+							<span class="code_blue">
+								+
+							</span>
+							<span class="code_purple">
+								1
+							</span>
+							<span class="code_green">
+								)
+
+								<span class="code_green">
+									;
+								</span>
+						</div>
+						<div class="code_row " :class="{line_running:line4running}">
+							<span class="code_green">
+								}
+							</span>
+						</div>
+						<div class="code_row " :class="{line_running:line5running}">
+							<span class="code_blue">
+								int
+							</span>
+							<span class="code_black">
+								winLike
+							</span>
+							<span class="code_green">
+								=
+							</span>
+							<span class="code_black" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								taste
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								(
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:!getFavourite,code_display_none:getFavourite,focus:focus}">
+								{{winNum}}
+							</span>
+							<span class="code_green" :class="{code_display:!getFavourite,code_display_none:getFavourite}">
+								)
+							</span>
+							<span class="code_purple code_focus" :class="{code_display:getFavourite,code_display_none:!getFavourite,focus:focus}">
+								{{favouriteNum}}
+							</span>
+							<span class="code_green">
+								;
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="xiaoHong_wrap"> -->
+				<div class="canteen">
+					<div class="canteen_title">
+						大连工业大学第四学生食堂
+					</div>
+
+					<div class="windows_line">
+						<div class="window_wrap" v-for="(v,i) in 10" :key="i">
+							<div class="xiaoHong op0" :class="{op1:winNum == i+1}">
+								<div class="xiaoHong_outside">
+									<div class="xiaoHong_inside">
+										<!-- 红 -->
+									</div>
+								</div>
+							</div>
+							<div class="window_num" :class="{window_num_favourite:i+1==favouriteNum}">
+								{{i+1}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+
+			<!-- 控制区域 -->
+			<div class="ct-wrap">
+				<div type="button" class="button-blue" @click="autoNextStep">
+					<div class="">
+						{{autoOrStop}}
+					</div>
+				</div>
+				<div type="button" class="button-red" @click="nextStep">
+					<div class="">
+						下一步
+					</div>
+				</div>
+				<div type="button" class="button-orange" @click="reset">
+					<div class="">
+						重置
+					</div>
+				</div>
+				<div type="button" class="button-green" @click="exchangeLanguage">
+					<div class="">
+						切换语言
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<!-- 引入本页js -->
+	<script src="./js/recursive-demo-1.js" type="text/javascript" charset="utf-8"></script>
+</html>
