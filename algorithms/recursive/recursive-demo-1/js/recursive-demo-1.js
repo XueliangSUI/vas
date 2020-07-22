@@ -2,7 +2,7 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		languages: ['文字描述', 'JavaScript', 'C语言'],
-		languageSelected: 2,
+		languageSelected: 0,
 		favouriteNum: 0,
 		getFavourite: false,
 		line1running: false,

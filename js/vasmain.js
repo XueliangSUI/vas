@@ -48,6 +48,17 @@ var app = new Vue({
 						mdSrc: "./algorithms/sort/choose-sort/introduce.md"
 						// fold: ""
 					}]
+				},{
+					title: "递归",
+					algorithmSrc: "",
+					mdSrc: "",
+					fold: true,
+					content: [{
+						title: "递归实例1",
+						algorithmSrc: "./algorithms/recursive/recursive-demo-1/index.html",
+						mdSrc: "./algorithms/recursive/recursive-demo-1/introduce.md",
+						// fold: ""
+					}]
 				}, {
 					title: "图论",
 					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
@@ -182,7 +193,7 @@ var app = new Vue({
 				this.ifMdBodyShow = true
 				this.ifAnmShow = true
 				this.mdToHtml(lv.mdSrc)
-				// window.location.hash = "#algorithmsId";
+				this.algorithmsSrc = lv.algorithmSrc
 			} else if (lv.mdSrc) {
 				// 如果仅存在md说明文档：显示它，跳转到md版块id，并隐藏动画版块
 				this.ifMdBodyShow = true
@@ -192,6 +203,7 @@ var app = new Vue({
 				// 如果仅存在动画版块：显示它，跳转到动画版块id，并隐藏md版块
 				this.ifMdBodyShow = false
 				this.ifAnmShow = true
+				this.algorithmsSrc = lv.algorithmSrc
 			} else if (!lv.mdSrc && !lv.algorithmSrc) {
 				// 如果既不存在md版块，也不存在动画版块，则什么也不做
 				// 不隐藏md和动画
