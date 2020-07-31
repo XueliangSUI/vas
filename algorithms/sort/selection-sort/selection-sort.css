@@ -165,3 +165,10 @@ body {
 	background-color: #4c0f82;
 	z-index: 10;
 }
+
+.min_show_off{
+	transition: 0.5s;
+	text-shadow: 0 0 1vmin #fff;
+	color: #ffff7f;
+	/* -webkit-text-stroke:0.1vmin #aaa; */
+}
