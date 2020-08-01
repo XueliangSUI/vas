@@ -1,4 +1,4 @@
-window.onload = function() {
+ {
 	// 初始化输入框容器
 	initInputWrap()
 
@@ -10,7 +10,7 @@ window.onload = function() {
  */
 function initInputWrap(){
 	let inputWraps = document.getElementsByClassName('control-input-wrap')
-	console.log(inputWraps)
+	// console.log(inputWraps)
 	for (let inputWrap of inputWraps) {
 		// console.log(inputWrap.firstElementChild, inputWrap.lastElementChild)
 		inputWrap.firstElementChild.onfocus = function() {
