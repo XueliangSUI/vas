@@ -19,7 +19,7 @@ var app = new Vue({
 				content: [{
 					title: "排序",
 					// algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/introduce.md",
+					mdSrc: "./algorithms/sort/sort.md",
 					fold: true,
 					content: [{
 						title: "冒泡排序",
@@ -28,8 +28,8 @@ var app = new Vue({
 						// fold: ""
 					}, {
 						title: "选择排序",
-						algorithmSrc: "./algorithms/sort/choose-sort/index.html",
-						mdSrc: "./algorithms/sort/choose-sort/introduce.md"
+						algorithmSrc: "./algorithms/sort/selection-sort/selection-sort.html",
+						mdSrc: "./algorithms/sort/selection-sort/selection-sort.md"
 						// fold: ""
 					}]
 				}, {

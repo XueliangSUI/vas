@@ -218,3 +218,52 @@ body {
 	width: 30vmin;
 	height: 30vmin;
 }
+
+
+/* 文本输入框 */
+.control-input-wrap {
+
+	height: 8vmin;
+	width: 20vmin;
+	position: relative;
+}
+
+.control-input-wrap-input {
+	color: #555;
+	text-align: center;
+	transition: 0.3s;
+	font-size: 3vmin;
+	height: 8vmin;
+	width: 20vmin;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.4vmin solid #999;
+	position: absolute;
+	top: calc(-50%-20px);
+}
+
+
+.control-input-wrap-input-focus {
+	transition: 0.3s;
+	border-bottom: 0.1vmin solid rgba(70,70,70,0);
+	box-shadow: 0 0 2vmin 1vmin #c2f4ff;
+}
+
+.control-input-wrap-div {
+	pointer-events: none;
+	transition: 0.3s;
+	line-height: 8vmin;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	color: #aaa;
+	text-align: center;
+	font-size: 3vmin;
+}
+
+.control-input-wrap-div-focus {
+	transition: 0.3s;
+	font-size: 1vmin;
+	top: -3vmin;
+}
