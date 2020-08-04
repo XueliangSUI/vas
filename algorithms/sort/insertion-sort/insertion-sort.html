@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 可选的框架 -->
+		<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="../../../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script> -->
+	</head>
+	<body>
+		<div id="app" class="main">
+			<div class="an-wrap">
+				<div id="cell9" class="cell cell9">
+					<p>9</p>
+				</div>
+				<div id="cell8" class="cell cell8">
+					<p>8</p>
+				</div>
+				<div id="cell7" class="cell cell7">
+					<p>7</p>
+				</div>
+				<div id="cell6" class="cell cell6">
+					<p>6</p>
+				</div>
+				<div id="cell5" class="cell cell5">
+					<p>5</p>
+				</div>
+				<div id="cell4" class="cell cell4">
+					<p>4</p>
+				</div>
+				<div id="cell3" class="cell cell3">
+					<p>3</p>
+				</div>
+				<div id="cell2" class="cell cell2">
+					<p>2</p>
+				</div>
+				<div id="cell1" class="cell cell1">
+					<p>1</p>
+				</div>
+			</div>
+
+			<div class="ct-wrap">
+				<!-- 控制容器 control-wrap -->
+				<div type="button" class="button-blue" @click="autoNextStep">
+					<div class="" id="autoNextStep">
+						自动
+					</div>
+				</div>
+				<div type="button" class="button-red" @click="nextStep">
+					<div class="">
+						下一步
+					</div>
+				</div>
+				<div type="button" class="button-orange" @click="reset">
+					<div class="">
+						重置
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- 引入当前目录下的css和js -->
+	<link rel="stylesheet" type="text/css" href="./insertion-sort.css" />
+	<script type="text/javascript" src="./insertion-sort.js"></script>
+	<!-- 引入控件，可选 -->
+	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
+	<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
+
+
+</html>

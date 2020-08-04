@@ -45,9 +45,11 @@ var app = new Vue({
 				// 当按钮文字为【自动】时，切换文字并开启计时器
 				document.getElementById("autoNextStep").innerText = "暂停"
 				timer = self.setInterval(() => {
-					this.nextStep()
+
 					if (sortStepNum > 36) {
 						window.clearInterval(timer)
+					} else {
+						this.nextStep()
 					}
 				}, 1000)
 			} else if (document.getElementById("autoNextStep").innerText == "暂停") {
