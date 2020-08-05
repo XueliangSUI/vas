@@ -29,7 +29,7 @@ a {
 	overflow-y: scroll;
 	/* border-radius: 1vmin; */
 	background-color: white;
-	box-shadow: 0vmin 0vmin 2vmin #aaa;
+	box-shadow: 0vmin 0vmin 3vmin  rgba(0,0,0,.1);
 	
 }
 
@@ -42,9 +42,10 @@ a {
 	overflow-y: scroll;
 }
 
-.anmwrap>.mdwrap {
+.mdwrap {
 	width: 100vmin;
-	margin: 0 auto;
+	margin: 2vmin auto 10vmin auto;
+	padding: 0;
 	background-color: white;
 }
 
