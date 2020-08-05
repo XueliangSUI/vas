@@ -63,6 +63,11 @@ var app = new Vue({
 						algorithmSrc: "./algorithms/recursive/recursive-demo-1/index.html",
 						mdSrc: "./algorithms/recursive/recursive-demo-1/introduce.md",
 						// fold: ""
+					},{
+						title: "递归实例——斐波那契数列",
+						algorithmSrc: "./algorithms/recursive/recursive-demo-2/recursive-demo-2.html",
+						mdSrc: "./algorithms/recursive/recursive-demo-2/recursive-demo-2.md",
+						// fold: ""
 					}]
 				}, {
 					title: "图论",
