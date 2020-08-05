@@ -12,48 +12,40 @@ a {
 	text-decoration: none;
 }
 
-/*正常的未被访问过的链接*/
-/* a:link {
-	text-decoration: none;
-} */
-
-/*已经访问过的链接*/
-/* a:visited {
-	text-decoration: none;
-} */
-
 #app {
 
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: #eee;
+	background-color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
 
 .nav {
-	height: 90%;
+	height: 100%;
 	width: 20%;
 	overflow-y: scroll;
-	border-radius: 1vmin;
+	/* border-radius: 1vmin; */
 	background-color: white;
 	box-shadow: 0vmin 0vmin 3vmin #aaa;
 	
 }
 
 .anmwrap {
-	width: 70%;
-	height: 90%;
-	background-color: white;
-	border-radius: 1vmin;
-	box-shadow: 0vmin 0vmin 3vmin #aaa;
+	width: 80%;
+	height: 100%;
+	/* background-color: white; */
+	/* border-radius: 1vmin; */
+	/* box-shadow: 0vmin 0vmin 3vmin #aaa; */
 	overflow-y: scroll;
 }
 
 .anmwrap>.mdwrap {
-	margin: 5vmin;
+	width: 100vmin;
+	margin: 0 auto;
+	background-color: white;
 }
 
 
@@ -92,8 +84,8 @@ a {
 	margin: 0 auto;
 	border: none;
 	background-color: #aaa;
-	width: 90vmin;
-	height: 90vmin;
+	width: 100vmin;
+	height: 100vmin;
 }
 
 /**
