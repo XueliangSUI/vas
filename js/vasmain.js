@@ -13,8 +13,8 @@ var app = new Vue({
 				fold: true
 			}, {
 				title: "数据结构常用算法",
-				algorithmSrc: "./algorithms/sort/bubble_sort/index.html",
-				mdSrc: "./algorithms/sort/bubble_sort/introduce.md",
+				// algorithmSrc: "./algorithms/sort/bubble_sort/index.html",
+				// mdSrc: "./algorithms/sort/bubble_sort/introduce.md",
 				fold: true,
 				content: [{
 					title: "排序",
@@ -75,9 +75,14 @@ var app = new Vue({
 					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true,
 					content: [{
-						title: "顺序查找",
-						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						title: "前序遍历",
+						algorithmSrc: "./algorithms/tree/NLRCompleteBinaryTree/NLRCompleteBinaryTree.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// fold: ""
+					},{
+						title: "后序遍历",
+						algorithmSrc: "./algorithms/tree/LRNCompleteBinaryTree/LRNCompleteBinaryTree.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
 					}, {
 						title: "二分查找",
