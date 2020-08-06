@@ -10,19 +10,22 @@
 	<body>
 		<div id="app" class="main">
 			<div class="an-wrap">
-				<div class="fWrap" v-for="(wrapLine,wrapIndex) in fArr">
-					<div class="fContent" v-for="(f,fIndex) in wrapLine">
-						{{f}}
+				<div class="allWrap">
+					<div class="fWrap" v-for="(wrapLine,wrapIndex) in fArr" :key="wrapIndex" :style="{fontSize:fontSizeArr[wrapIndex]}">
+						<div class="fContent" v-for="(f,fIndex) in wrapLine" :key="fIndex" :style="{backgroundColor:f.backgroundcolor}">
+							{{f.text}}
+						</div>
 					</div>
 				</div>
+				
 			</div>
 
 			<div class="ct-wrap">
 				<!-- 控制容器 control-wrap -->
 				<div class="control-input-wrap">
-					<input type="number" min="2" max="9"  name="" id="" value="" class="control-input-wrap-input" v-model="inputNum" @input="onInput"/>
+					<input type="number" min="2" max="9"  name="" id="" value="" class="control-input-wrap-input" v-model.number="inputNum" @change="onInputChange" @blur="onBlur"/>
 					<div class="control-input-wrap-div">
-						输入位数2~9
+						位数3~9
 					</div>
 					
 				</div>
@@ -50,6 +53,10 @@
 	<!-- 引入控件，可选 -->
 	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
 	<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
+	
 	
 
 </html>
