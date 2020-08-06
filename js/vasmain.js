@@ -13,131 +13,149 @@ var app = new Vue({
 				fold: true
 			}, {
 				title: "数据结构常用算法",
-				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+				algorithmSrc: "./algorithms/sort/bubble_sort/index.html",
+				mdSrc: "./algorithms/sort/bubble_sort/introduce.md",
 				fold: true,
 				content: [{
 					title: "排序",
-					// algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
+					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					mdSrc: "./algorithms/sort/sort.md",
 					fold: true,
 					content: [{
 						title: "冒泡排序",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
 					}, {
 						title: "选择排序",
-						algorithmSrc: "./algorithms/sort/selection-sort/selection-sort.html",
-						mdSrc: "./algorithms/sort/selection-sort/selection-sort.md"
+						algorithmSrc: "./algorithms/sort/selection_sort/selection_sort.html",
+						mdSrc: "./algorithms/sort/selection_sort/selection_sort.md"
 						// fold: ""
 					}, {
 						title: "插入排序",
-						algorithmSrc: "./algorithms/sort/insertion-sort/insertion-sort.html",
-						mdSrc: "./algorithms/sort/insertion-sort/insertion-sort.md"
+						algorithmSrc: "./algorithms/sort/insertion_sort/insertion_sort.html",
+						mdSrc: "./algorithms/sort/insertion_sort/insertion_sort.md"
 						// fold: ""
 					}]
 				}, {
 					title: "查找",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true,
 					content: [{
 						title: "顺序查找",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
 					}, {
 						title: "二分查找",
-						algorithmSrc: "./algorithms/sort/choose-sort/index.html",
-						mdSrc: "./algorithms/sort/choose-sort/introduce.md"
+						algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
 						// fold: ""
 					}]
-				},{
+				}, {
 					title: "递归",
 					algorithmSrc: "",
 					mdSrc: "",
 					fold: true,
 					content: [{
-						title: "递归实例1",
-						algorithmSrc: "./algorithms/recursive/recursive-demo-1/index.html",
-						mdSrc: "./algorithms/recursive/recursive-demo-1/introduce.md",
+						title: "实例——工大食堂",
+						algorithmSrc: "./algorithms/recursive/recursive_demo_1/recursive_demo_1.html",
+						mdSrc: "./algorithms/recursive/recursive_demo_1/recursive_demo_1.md",
 						// fold: ""
-					},{
-						title: "递归实例——斐波那契数列",
-						algorithmSrc: "./algorithms/recursive/recursive-demo-2/recursive-demo-2.html",
-						mdSrc: "./algorithms/recursive/recursive-demo-2/recursive-demo-2.md",
+					}, {
+						title: "斐波那契数列",
+						algorithmSrc: "./algorithms/recursive/recursive_demo_2/recursive_demo_2.html",
+						mdSrc: "./algorithms/recursive/recursive_demo_2/recursive_demo_2.md",
+						// fold: ""
+					}]
+				}, {
+					title: "树",
+					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+					fold: true,
+					content: [{
+						title: "顺序查找",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// fold: ""
+					}, {
+						title: "二分查找",
+						algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
 						// fold: ""
 					}]
 				}, {
 					title: "图论",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true
 				}]
 			}, {
 				title: "扩展算法",
-				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+				algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+				mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 				fold: true,
 				content: [{
 					title: "迷宫",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true,
 					content: [{
 						title: "迷宫生成1",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}, {
 						title: "迷宫生成2",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}, {
 						title: "迷宫寻路",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}]
 				}, {
 					title: "思维扩展",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true,
 					content: [{
 						title: "生命游戏",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}]
 				}]
 			}, {
 				title: "其他",
-				algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-				mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+				algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+				mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 				fold: true,
 				content: [{
 					title: "项目相关",
-					algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-					mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: true,
 					content: [{
-						title: "项目总结",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						title: "项目总结"
+						// ,
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}, {
-						title: "开发者",
-						algorithmSrc: "./algorithms/sort/bubble-sort/index.html",
-						mdSrc: "./algorithms/sort/bubble-sort/introduce.md",
+						title: "开发者"
+						// ,
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: true
 					}]
 				}]
 			}],
 			aaaa: "aaa",
-			algorithmsSrc: "./algorithms/sort/bubble-sort/index.html"
+			algorithmsSrc: "./algorithms/sort/bubble_sort/index.html"
 		}
 	},
 	mounted: function() {

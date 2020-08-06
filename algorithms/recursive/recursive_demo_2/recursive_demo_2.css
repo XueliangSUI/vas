@@ -23,3 +23,14 @@
 	align-items: center;
 	justify-content: space-around;
 }
+
+.textHolder{
+	width: 100%;
+	color: #888;
+	font-weight: 600;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	font-size: 4vmin;
+	justify-content: space-around;
+}

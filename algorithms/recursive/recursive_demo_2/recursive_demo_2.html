@@ -11,12 +11,16 @@
 		<div id="app" class="main">
 			<div class="an-wrap">
 				<div class="allWrap">
-					<div class="fWrap" v-for="(wrapLine,wrapIndex) in fArr" :key="wrapIndex" :style="{fontSize:fontSizeArr[wrapIndex]}">
+					<div class="fWrap" v-if="fArr.length>=1" v-for="(wrapLine,wrapIndex) in fArr" :key="wrapIndex" :style="{fontSize:fontSizeArr[wrapIndex]}">
 						<div class="fContent" v-for="(f,fIndex) in wrapLine" :key="fIndex" :style="{backgroundColor:f.backgroundcolor}">
 							{{f.text}}
 						</div>
 					</div>
+					<div class="textHolder" v-if="fArr.length==0">
+						在输入框中输入待求斐波那契数列值的位数
+					</div>
 				</div>
+				
 				
 			</div>
 
@@ -48,8 +52,8 @@
 		</div>
 	</body>
 	<!-- 引入当前目录下的css和js -->
-	<link rel="stylesheet" type="text/css" href="./recursive-demo-2.css" />
-	<script type="text/javascript" src="./recursive-demo-2.js"></script>
+	<link rel="stylesheet" type="text/css" href="./recursive_demo_2.css" />
+	<script type="text/javascript" src="./recursive_demo_2.js"></script>
 	<!-- 引入控件，可选 -->
 	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
 	<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>

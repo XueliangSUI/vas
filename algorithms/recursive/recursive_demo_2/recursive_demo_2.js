@@ -39,7 +39,7 @@ var app = new Vue({
 				try {
 					clearInterval(timer)
 				} catch (e) {}
-				document.getElementById('autoNextStep').innerText = '暂停'
+				document.getElementById('autoNextStep').innerText = '自动'
 				alert('结束')
 				return
 			}

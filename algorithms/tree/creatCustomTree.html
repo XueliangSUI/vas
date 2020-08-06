@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自定义二叉树</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <link rel="stylesheet" href="lib/main.css" type="text/css">
+    <script src="lib/pixi.min.js"></script>
+    <script src="lib/pixi-layers.js"></script>
+    <script src="lib/tween.js"></script>
+    <script src="lib/class.js"></script>
+    <script src="lib/treeVAS.js"></script>
+</head>
+<body>
+    <div id="par">
+        <canvas id="main"></canvas>
+    </div>
+    <div class="butt">
+        <div class="b1" id="auto" style="width: 30%">导出为json格式</div>
+        <div class="b3" id="reset">重置</div>
+    </div>
+</body>
+<script>
+    let config = new T.Config({
+        view: document.getElementById("main"),
+        resizeTo: document.getElementById("par"),
+        resolution: 2,
+        backgroundColor: 0xf0f0f0,
+        bottom: 50
+    });
+    let tree = new T.app(config);
+    tree.clickCallBack = (d)=>{
+        d.add();
+        tree.updataNodeText();
+    }
+
+    /*
+    * 绑定渲染器
+    * */
+    let a; let b;let reseting = true;
+    let cr = ()=>{
+        a = T.generateFn.onlyNode();
+        b = tree.renderer(a);
+        b.end();
+        setTimeout(()=>{
+            reseting = false;
+        }, tree.asp);
+        return b;
+    };
+    cr();
+
+    document.getElementById("reset").onclick = ()=>{
+        if (reseting) return false;
+        reseting = true;
+        tree.reset(()=>{
+            cr();
+        });
+    }
+
+    document.getElementById("auto").onclick = ()=>{
+        let data = tree.toJson();
+        console.log(JSON.stringify(data));
+    }
+</script>
+</html>
