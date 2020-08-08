@@ -26,12 +26,12 @@ var app = new Vue({
 		nextStep() {
 
 			if (this.fArr == '') {
-				alert('请输入位数')
+				msgQueue.pushMsgQueue({
+					text: '请输入位数'
+				})
 				return
 			}
-			// console.log('this.fArr.length', this.fArr.length, 'this.fArr[this.fArr.length - 1].length', !String(this.fArr[this
-			// 	.fArr.length -
-			// 	1].length, this.fArr[this.fArr.length - 1][0].text).match(/[^0-9]+/))
+
 			// 最后一位的文本是纯数字，算法结束
 			if (this.fArr.length > 1 && this.fArr[this.fArr.length - 1].length == 1 && !String(this.fArr[this.fArr.length -
 					1].length, this.fArr[this.fArr.length - 1][0].text).match(/[^0-9]+/)) {
@@ -40,7 +40,9 @@ var app = new Vue({
 					clearInterval(timer)
 				} catch (e) {}
 				document.getElementById('autoNextStep').innerText = '自动'
-				alert('结束')
+				msgQueue.pushMsgQueue({
+					text: '结束'
+				})
 				return
 			}
 			for (let i = 0; i < this.fArr[this.fArr.length - 1].length; i++) {

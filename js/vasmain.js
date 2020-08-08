@@ -36,6 +36,11 @@ var app = new Vue({
 						algorithmSrc: "./algorithms/sort/insertion_sort/insertion_sort.html",
 						mdSrc: "./algorithms/sort/insertion_sort/insertion_sort.md"
 						// fold: ""
+					}, {
+						title: "模板/组件库",
+						algorithmSrc: "./algorithms/sort/mu_ban/mu_ban.html",
+						mdSrc: "./algorithms/sort/mu_ban/mu_ban.md"
+						// fold: ""
 					}]
 				}, {
 					title: "查找",

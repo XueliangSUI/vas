@@ -1,1 +1,1 @@
-document.write("<script language=javascript src='https://lib.baomitu.com/vue/2.6.11/vue.js'></script>");
+document.write("<script src='https://cdn.bootcdn.net/ajax/libs/vue/2.6.1/vue.js'></script>");

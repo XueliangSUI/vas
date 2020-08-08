@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 		<!-- 可选的框架 -->
-		<!-- <script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<!-- <script src="../../../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script> -->
 	</head>
 	<body>
@@ -14,20 +14,28 @@
 				动画容器
 				默认宽度100vmin
 				高度80vmin
-				
+
 				下方控件容器
 				宽度100vmin
 				高度20vmin
+
+				
+				<button type="button" onclick="showTip()">演示按钮：弹出消息提示</button>
+				
+				
+				
+
+
 			</div>
 
 			<div class="ct-wrap">
 				<!-- 控制容器 control-wrap -->
 				<div class="control-input-wrap">
-					<input type="" name="" id="" value="" class="control-input-wrap-input"/>
+					<input type="" name="" id="" value="" class="control-input-wrap-input" />
 					<div class="control-input-wrap-div">
 						输入文字…
 					</div>
-					
+
 				</div>
 				<div type="button" class="button-blue" @click="autoNextStep">
 					<div class="" id="autoNextStep">
@@ -46,6 +54,12 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- 弹出消息提示组件，依赖于vue，必须引入公共js库中的vue.js -->
+		<!-- 千万不能放在另一个vue实例中，一定要拿到另一个vue实例的外面，如果你的页面中没有使用vue，可以无视这句话 -->
+		<div id="msgQueueWrap">	</div>
+		
+		
 	</body>
 	<!-- 引入当前目录下的css和js -->
 	<link rel="stylesheet" type="text/css" href="./mu_ban.css" />
@@ -53,6 +67,6 @@
 	<!-- 引入控件，可选 -->
 	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
 	<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
-	
+
 
 </html>
