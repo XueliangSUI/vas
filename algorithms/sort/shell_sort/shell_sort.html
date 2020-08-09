@@ -4,50 +4,63 @@
 		<meta charset="utf-8">
 		<title></title>
 		<!-- 可选的框架 -->
-		<!-- <script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<!-- <script src="../../../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script> -->
 	</head>
 	<body>
 		<div id="app" class="main">
 			<div class="an-wrap">
-				animation-wrap
-				动画容器
-				默认宽度100vmin
-				高度80vmin
-				
-				下方控件容器
-				宽度100vmin
-				高度20vmin
+				<div class="infoWrap">
+					<div class="">
+						第{{turn}}轮
+					</div>
+					<div class="">
+						当前步长：{{stepLength}}
+					</div>
+				</div>
+				<transition-group name="list" tag="div" class="cellsListWrap">
+					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor}'>
+						<div id="">
+							{{cellItem.text}}
+						</div>
+						<div class="triangle" v-show="cellsGroup.indexOf(cellIndex) != -1">
+							
+						</div>
+					</div>
+
+				</transition-group>
+
 			</div>
 
 			<div class="ct-wrap">
 				<!-- 控制容器 control-wrap -->
-				<div class="control-input-wrap">
+				<!-- <div class="control-input-wrap">
 					<input type="" name="" id="" value="" class="control-input-wrap-input"/>
 					<div class="control-input-wrap-div">
 						输入文字…
 					</div>
 					
-				</div>
-				<div type="button" class="button-blue" @click="autoNextStep">
+				</div> -->
+				<!-- 	<div type="button" class="button-blue" @click="autoNextStep">
 					<div class="" id="autoNextStep">
 						自动
 					</div>
-				</div>
+				</div> -->
 				<div type="button" class="button-red" @click="nextStep">
 					<div class="">
 						下一步
 					</div>
 				</div>
-				<div type="button" class="button-orange" @click="reset">
+				<!-- 				<div type="button" class="button-orange" @click="reset">
 					<div class="">
 						重置
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</body>
 	<!-- 引入当前目录下的css和js -->
+	<script src="./gradientColor.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="./shell_sort.css" />
 	<script type="text/javascript" src="./shell_sort.js"></script>
 	<!-- 引入控件，可选 -->

@@ -1,0 +1,63 @@
+.infoWrap {
+	height: 15%;
+	display: flex;
+	font-size: 3vmin;
+	color: #555;
+	font-weight: 600;
+	justify-content: space-around;
+}
+
+.cellsListWrap {
+	border: 1px solid black;
+	height: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	padding: 0 2vmin 5vmin 2vmin;
+}
+
+
+.list-item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.list-enter-active,
+.list-leave-active {
+	transition: all 1s;
+}
+
+.list-enter,
+.list-leave-to
+
+/* .list-leave-active for below version 2.1.8 */
+	{
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.cell {
+	position: relative;
+	color: white;
+	font-weight: 600;
+	width: 3.5vmin;
+	box-shadow: 0 0 1vmin black;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 0 5vmin 0;
+	font-size: 3vmin;
+	border-radius: 0.3vmin;
+}
+
+.triangle{
+	  width: 0;
+	    height: 0;
+	    border-left: 1vmin solid transparent;
+	    border-right: 1vmin solid transparent;
+	    border-bottom: 2vmin solid red;
+		position: absolute;
+		bottom: -4vmin;
+}

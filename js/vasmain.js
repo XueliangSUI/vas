@@ -37,6 +37,11 @@ var app = new Vue({
 						mdSrc: "./algorithms/sort/insertion_sort/insertion_sort.md"
 						// fold: ""
 					}, {
+						title: "希尔排序",
+						algorithmSrc: "./algorithms/sort/shell_sort/shell_sort.html",
+						mdSrc: "./algorithms/sort/shell_sort/shell_sort.md"
+						// fold: ""
+					}, {
 						title: "模板/组件库",
 						algorithmSrc: "./algorithms/sort/mu_ban/mu_ban.html",
 						mdSrc: "./algorithms/sort/mu_ban/mu_ban.md"
