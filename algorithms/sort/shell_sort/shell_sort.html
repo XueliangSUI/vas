@@ -17,14 +17,17 @@
 					<div class="">
 						当前步长：{{stepLength}}
 					</div>
+					<div class="">
+						本轮第{{group}}组
+					</div>
 				</div>
 				<transition-group name="list" tag="div" class="cellsListWrap">
-					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor}'>
+					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell list-item" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor}'>
 						<div id="">
 							{{cellItem.text}}
 						</div>
 						<div class="triangle" v-show="cellsGroup.indexOf(cellIndex) != -1">
-							
+
 						</div>
 					</div>
 
@@ -51,11 +54,11 @@
 						下一步
 					</div>
 				</div>
-				<!-- 				<div type="button" class="button-orange" @click="reset">
+				<div type="button" class="button-orange" @click="reset">
 					<div class="">
 						重置
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</body>
@@ -66,6 +69,6 @@
 	<!-- 引入控件，可选 -->
 	<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
 	<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
-	
+
 
 </html>

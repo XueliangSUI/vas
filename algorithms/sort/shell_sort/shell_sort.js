@@ -14,6 +14,7 @@ var app = new Vue({
 			stepLength: 0,
 			stepLengthThisTurn: 0,
 			turn: 1,
+			group: 0,
 			cellsGroup: []
 
 		}
@@ -54,14 +55,17 @@ var app = new Vue({
 		 * 下一步
 		 */
 		nextStep: function() {
-			if (this.stepLength == 1) {
+			// 下一组
+			this.group++
+			if (this.stepLength < 1) {
+				this.stepLength = 1
 				// 最后一轮
-			} else if (this.stepLength > 1) {
+			} else if (this.stepLength >= 1) {
 				// 排序过程中
-				this.stepLength = Math.floor(this.cellsList.length / 2)
+				// this.stepLength = Math.floor(this.cellsList.length / 2)
 				this.cellsGroup = []
 
-				if (this.index + this.stepLength <= this.cellsList.length - 1) {
+				if (this.group <= this.stepLength) {
 					// 继续排序
 					for (let i = this.index; i < this.cellsList.length; i += this.stepLength) {
 						this.cellsGroup.push(i)
@@ -69,9 +73,13 @@ var app = new Vue({
 					}
 					this.insertionSortForGroup()
 					this.index++
-				} else if (this.index + this.stepLength > this.cellsList.length - 1) {
+				} else if (this.group > this.stepLength) {
+					this.group = 0
+					this.index = 0
 					// 本轮排序结束，进入下一轮
+					this.stepLength = Math.floor(this.stepLength / 2)
 					console.log(' 本轮排序结束，进入下一轮')
+					this.turn++
 				}
 
 
@@ -80,22 +88,28 @@ var app = new Vue({
 			// console.log(this.cellsGroup, this.stepLength, this.cellsList)
 		},
 		insertionSortForGroup() {
-			
+
 			for (let i = 1; i < this.cellsGroup.length; i++) {
-				var tCell =this.cellsList[this.cellsGroup[i]] 
+				var tCell = this.cellsList[this.cellsGroup[i]]
 				// this.cellsList.splice([this.cellsGroup[i]], 1)
 				for (let j = i - 1; j >= 0; j--) {
-					console.log(this.cellsList[this.cellsGroup[i]], this.cellsList[this.cellsGroup[j]])
-					if (this.cellsList[this.cellsGroup[i]].text < this.cellsList[this.cellsGroup[j]].text) {} else if (this.cellsList[this.cellsGroup[
+					console.log(i, j, this.cellsList)
+					console.log(this.cellsList[this.cellsGroup[i]].text, this.cellsList[this.cellsGroup[j]].text)
+					this.exchangeCells(i, j, tCell)
+					console.log(this.cellsList[this.cellsGroup[i]].text, this.cellsList[this.cellsGroup[j]].text)
+					if (this.cellsList[this.cellsGroup[i]].text < this.cellsList[this.cellsGroup[j]].text) {
+						this.cellsList[this.cellsGroup[i]] = this.cellsList[this.cellsGroup[j]]
+						this.cellsList[this.cellsGroup[j]] = tCell
+					} else if (this.cellsList[this.cellsGroup[
 							i]].text > this.cellsList[this.cellsGroup[j]].text) {
-								console.log(this.cellsGroup, this.stepLength, this.cellsList)
-						// this.cellsList.splice([this.cellsGroup[j+1]], 0, tCell)
-						for (let k = i; k > j+1; k--) {
-							this.cellsList[this.cellsGroup[k]] = this.cellsList[this.cellsGroup[k - 1]]
-						}
-						if(i>j+1){this.cellsList[this.cellsGroup[j]] = tCell}
-						
-						break
+						// 		console.log(this.cellsGroup, this.stepLength, this.cellsList)
+						// // this.cellsList.splice([this.cellsGroup[j+1]], 0, tCell)
+						// for (let k = i; k > j+1; k--) {
+						// 	this.cellsList[this.cellsGroup[k]] = this.cellsList[this.cellsGroup[k - 1]]
+						// }
+						// if(i>j+1){this.cellsList[this.cellsGroup[j]] = tCell}
+
+						// break
 					}
 				}
 			}
@@ -105,6 +119,21 @@ var app = new Vue({
 			// 	 this.cellsList[this.cellsGroup[index-1]] = t
 			// }
 			// if(index == this.cellsGroup[index].length-1  &&  )
+		},
+		exchangeCells(index_i, index_j, tCell) {
+			console.log('index_i', index_i, 'index_j', index_j)
+			if (this.cellsList[this.cellsGroup[index_i]].text < this.cellsList[this.cellsGroup[index_j]].text) {
+				this.cellsList[this.cellsGroup[index_i]] = this.cellsList[this.cellsGroup[index_j]]
+				this.cellsList[this.cellsGroup[index_j]] = tCell
+			}
+			if (index_j >= 1) {
+
+				this.exchangeCells(index_j, index_j - 1, tCell)
+			}
+		},
+		reset(){
+			Object.assign(this.$data, this.$options.data())
+			this.initCells()
 		}
 	}
 })

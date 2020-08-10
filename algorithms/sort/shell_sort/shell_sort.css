@@ -18,22 +18,20 @@
 
 
 .list-item {
-	display: inline-block;
-	margin-right: 10px;
+	/* display: inline-block; */
+	 transition: all 0.5s;
 }
 
-.list-enter-active,
+
+
+.list-enter, .list-leave-to
+/* .list-complete-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .list-leave-active {
-	transition: all 1s;
-}
-
-.list-enter,
-.list-leave-to
-
-/* .list-leave-active for below version 2.1.8 */
-	{
-	opacity: 0;
-	transform: translateY(30px);
+  position: absolute;
 }
 
 .cell {
