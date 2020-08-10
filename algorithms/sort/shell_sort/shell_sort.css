@@ -5,15 +5,16 @@
 	color: #555;
 	font-weight: 600;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .cellsListWrap {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	height: 80%;
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
-	padding: 0 2vmin 5vmin 2vmin;
+	padding: 0 0vmin 5vmin 0vmin;
 }
 
 

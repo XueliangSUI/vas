@@ -44,7 +44,7 @@ function initMsgQueue() {
 		document.getElementById("msgQueueWrap").innerHTML =
 			`<transition-group name="msgItem" tag="div">
 				<!-- 弹出消息组件依赖于vue，若引入该组件必须同时引入vue 和control.css-->
-				<div class="msgItem-msgIndex" @click="removeMsgItem(msgIndex)" v-for="(msgItem,msgIndex) in msgQueueArr" :key="msgIndex" :style="{backgroundColor:msgItem.bgcolor,color:msgItem.textcolor}">
+				<div class="msgItem-msgIndex" @click="removeMsgItem(msgIndex)" v-for="(msgItem,msgIndex) in msgQueueArr" :key="msgIndex" :style="{backgroundColor:msgItem.backgroundColor,color:msgItem.color}">
 					<div class="msgItem_title">
 						{{msgItem.title}}
 					</div>
@@ -68,18 +68,19 @@ function initMsgQueue() {
 				pushMsgQueue({
 					text,
 					title = "提示",
-					bgcolor = "#9ce572",
-					textcolor = "color",
+					backgroundColor = "#9ce572",
+					color = "#555",
 					duration = 5000
 				}) {
 					this.msgQueueArr.push({
 						'text': text,
 						'title': title,
-						'bgcolor': bgcolor,
-						'textcolor': textcolor,
+						'backgroundColor': backgroundColor,
+						'color': color,
 						'id': this.msgQueueId
 					})
 					let tId = this.msgQueueId
+					console.log(color)
 					setTimeout(() => {
 						this.msgQueueArr.forEach((item, index) => {
 							if (item.id == tId) {

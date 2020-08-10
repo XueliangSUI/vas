@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<transition-group name="list" tag="div" class="cellsListWrap">
-					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell list-item" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor}'>
+					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell list-item" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor,fontSize:fontSize,width:cellItem.width,margin:cellItem.margin}'>
 						<div id="">
 							{{cellItem.text}}
 						</div>
@@ -37,6 +37,14 @@
 
 			<div class="ct-wrap">
 				<!-- 控制容器 control-wrap -->
+				<div class="control-input-wrap">
+					<input type="number" min="2" max="9" name="" id="" value="" class="control-input-wrap-input" v-model.number.lazy="inputNum"
+					 @blur="onBlur" />
+					<div class="control-input-wrap-div">
+						长度建议10~200
+					</div>
+
+				</div>
 				<!-- <div class="control-input-wrap">
 					<input type="" name="" id="" value="" class="control-input-wrap-input"/>
 					<div class="control-input-wrap-div">
@@ -44,11 +52,11 @@
 					</div>
 					
 				</div> -->
-				<!-- 	<div type="button" class="button-blue" @click="autoNextStep">
+				<div type="button" class="button-blue" @click="speedUp">
 					<div class="" id="autoNextStep">
-						自动
+						{{speedUpText}}
 					</div>
-				</div> -->
+				</div>
 				<div type="button" class="button-red" @click="nextStep">
 					<div class="">
 						下一步
@@ -61,6 +69,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- 弹出消息提示组件 -->
+		<div id="msgQueueWrap"></div>
 	</body>
 	<!-- 引入当前目录下的css和js -->
 	<script src="./gradientColor.js" type="text/javascript" charset="utf-8"></script>
