@@ -142,6 +142,7 @@ var app = new Vue({
 		},
 		reset() {
 			let tInputNum = this.inputNum
+			clearInterval(this.timer)
 			Object.assign(this.$data, this.$options.data())
 			this.inputNum = tInputNum
 			this.initCells()
