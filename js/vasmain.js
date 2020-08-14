@@ -10,17 +10,17 @@ var app = new Vue({
 				title: "开发阶段声明",
 				algorithmSrc: "",
 				mdSrc: "./VAS开发文档.md",
-				fold: true
+				fold: false
 			}, {
 				title: "数据结构常用算法",
 				// algorithmSrc: "./algorithms/sort/bubble_sort/index.html",
 				// mdSrc: "./algorithms/sort/bubble_sort/introduce.md",
-				fold: true,
+				fold: false,
 				content: [{
 					title: "排序",
 					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					mdSrc: "./algorithms/sort/sort.md",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "冒泡排序",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
@@ -51,7 +51,7 @@ var app = new Vue({
 					title: "查找",
 					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "顺序查找",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
@@ -59,15 +59,15 @@ var app = new Vue({
 						// fold: ""
 					}, {
 						title: "二分查找",
-						algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
+						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md"
 						// fold: ""
 					}]
 				}, {
 					title: "递归",
 					algorithmSrc: "",
 					mdSrc: "",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "实例——工大食堂",
 						algorithmSrc: "./algorithms/recursive/recursive_demo_1/recursive_demo_1.html",
@@ -83,89 +83,91 @@ var app = new Vue({
 					title: "树",
 					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "前序遍历",
 						algorithmSrc: "./algorithms/tree/NLRCompleteBinaryTree/NLRCompleteBinaryTree.html",
 						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
-					},{
+					}, {
 						title: "后序遍历",
 						algorithmSrc: "./algorithms/tree/LRNCompleteBinaryTree/LRNCompleteBinaryTree.html",
 						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
-					}, {
-						title: "二分查找",
-						algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
-						// fold: ""
-					}]
+					}
+					// , {
+					// 	title: "二分查找",
+					// 	algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
+					// 	mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
+					// 	// fold: ""
+					// },
+					]
 				}, {
 					title: "图论",
 					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true
+					fold: false
 				}]
 			}, {
 				title: "扩展算法",
-				algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-				mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-				fold: true,
+				// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+				// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+				fold: false,
 				content: [{
 					title: "迷宫",
-					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true,
+					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+					fold: false,
 					content: [{
 						title: "迷宫生成1",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}, {
 						title: "迷宫生成2",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}, {
 						title: "迷宫寻路",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}]
 				}, {
 					title: "思维扩展",
 					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "生命游戏",
 						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}]
 				}]
 			}, {
 				title: "其他",
 				algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 				mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-				fold: true,
+				fold: false,
 				content: [{
 					title: "项目相关",
 					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-					fold: true,
+					fold: false,
 					content: [{
 						title: "项目总结"
 						// ,
 						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}, {
 						title: "开发者"
 						// ,
 						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: true
+						// fold: false
 					}]
 				}]
 			}],
@@ -179,7 +181,7 @@ var app = new Vue({
 			title: "开发阶段声明",
 			algorithmSrc: "",
 			mdSrc: "./VAS开发文档.md",
-			fold: true
+			fold: false
 		}, 0)
 	},
 	methods: {
@@ -202,35 +204,39 @@ var app = new Vue({
 		 */
 		clickNavListTitle: function(lv, index1, index2, index3) {
 			// 控制目录折叠展开
-			if (index3 != undefined) {
-				// 存在index3
-				// 截止2020/5/3版本，暂时不存在【三级目录下还有内容】的情况
-				if (this.navList[index1].content[index2].content[index3].fold == true) {
-					this.navList[index1].content[index2].content[index3].fold = false
-				} else if (this.navList[index1].content[index2].content[index3].fold == false) {
-					this.navList[index1].content[index2].content[index3].fold = true
-				}
-			} else if (index2 != undefined) {
-				console.log(lv, index1, index2, this.navList[index1].content[index2])
-				// 存在index2
-				if (this.navList[index1].content[index2].fold == true) {
-					this.navList[index1].content[index2].fold = false
-				} else if (this.navList[index1].content[index2].fold == false) {
-					this.navList[index1].content[index2].fold = true
-				}
+			/**
+			 * 控制折叠展开功能暂时屏蔽，默认全场展开
+			 */
 
-			} else if (index1 != undefined) {
-				// 存在index1
-				if (this.navList[index1].fold == true) {
-					this.navList[index1].fold = false
-				} else if (this.navList[index1].fold == false) {
-					this.navList[index1].fold = true
-				}
-			}
+			// if (index3 != undefined) {
+			// 	// 存在index3
+			// 	// 截止2020/5/3版本，暂时不存在【三级目录下还有内容】的情况
+			// 	if (this.navList[index1].content[index2].content[index3].fold == true) {
+			// 		this.navList[index1].content[index2].content[index3].fold = false
+			// 	} else if (this.navList[index1].content[index2].content[index3].fold == false) {
+			// 		this.navList[index1].content[index2].content[index3].fold = true
+			// 	}
+			// } else if (index2 != undefined) {
+			// 	console.log(lv, index1, index2, this.navList[index1].content[index2])
+			// 	// 存在index2
+			// 	if (this.navList[index1].content[index2].fold == true) {
+			// 		this.navList[index1].content[index2].fold = false
+			// 	} else if (this.navList[index1].content[index2].fold == false) {
+			// 		this.navList[index1].content[index2].fold = true
+			// 	}
+
+			// } else if (index1 != undefined) {
+			// 	// 存在index1
+			// 	if (this.navList[index1].fold == true) {
+			// 		this.navList[index1].fold = false
+			// 	} else if (this.navList[index1].fold == false) {
+			// 		this.navList[index1].fold = true
+			// 	}
+			// }
 
 			// console.log(this.navList)
 
-
+			// 控制动画板块和md板块显示
 			if (lv.mdSrc && lv.algorithmSrc) {
 				// 如果存在md说明文档，且存在动画内容：显示它们
 				this.ifMdBodyShow = true

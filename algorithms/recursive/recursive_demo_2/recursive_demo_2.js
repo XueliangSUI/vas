@@ -13,14 +13,14 @@ var app = new Vue({
 	},
 	mounted: function() {
 		this.gradient = new gradientColor('#e74c3c', '#70a1ff', Number(this.inputNum) + 1);
-		console.log(this.inputNum, this.gradient)
+		//console.log(this.inputNum, this.gradient)
 		if (this.fArr.length == 0) {
 			this.fArr.push([{
 				'text': `f(${this.inputNum})`,
 				'backgroundcolor': this.gradient[0]
 			}])
 		}
-		console.log(this.fArr)
+		//console.log(this.fArr)
 	},
 	methods: {
 		reset() {
@@ -86,14 +86,14 @@ var app = new Vue({
 					this.updateFontSizeArr()
 				} else {
 					// 否则塞入f-1
-					console.log(this.fArr[this.fArr.length - 2][i])
+					//console.log(this.fArr[this.fArr.length - 2][i])
 					var t = this.fArr[this.fArr.length - 2][i].text.replace(/[^0-9]/ig, "")
 					this.fArr[this.fArr.length - 1].push({
 						'text': `f(${t-1})`,
 						'backgroundcolor': this.gradient[Number(this.inputNum) - t]
 					})
 					this.updateFontSizeArr()
-					console.log(t)
+					//console.log(t)
 				}
 				if (this.fArr[this.fArr.length - 2][i].text == 1 || this.fArr[this.fArr.length - 2][i].text == 'f(1)' || this.fArr[
 						this.fArr
@@ -101,14 +101,14 @@ var app = new Vue({
 					//如果该元素是1或f1或f2，则什么都不做
 				} else {
 					// 否则塞入f-2
-					// console.log(this.fArr[this.fArr.length - 2][i])
+					// //console.log(this.fArr[this.fArr.length - 2][i])
 					var t = this.fArr[this.fArr.length - 2][i].text.replace(/[^0-9]/ig, "")
 					this.fArr[this.fArr.length - 1].push({
 						'text': `f(${t-2})`,
 						'backgroundcolor': this.gradient[Number(this.inputNum) - t + 1]
 					})
 					this.updateFontSizeArr()
-					console.log(this.fArr)
+					//console.log(this.fArr)
 				}
 			}
 
@@ -127,7 +127,7 @@ var app = new Vue({
 			}
 		},
 		onBlur(e) {
-			// console.log(e.currentTarget.value)
+			// //console.log(e.currentTarget.value)
 			let flag = new RegExp("^[1-9]([0-9])*$").test(e.target.value);
 			if (!flag) {
 				this.inputNum = ''
@@ -136,12 +136,12 @@ var app = new Vue({
 				this.inputNum = e.currentTarget.value
 			}
 			if (e.currentTarget.value == '') {} else if (e.currentTarget.value > 9) {
-				this.inputNum = 9
+				this.inputNum = 19
 			} else if (e.currentTarget.value < 3) {
 				this.inputNum = 3
 			}
 			this.gradient = new gradientColor('#e74c3c', '#70a1ff', Number(this.inputNum) + 1);
-			// console.log(this.inputNum, this.gradient)
+			// //console.log(this.inputNum, this.gradient)
 			if (this.fArr.length == 0) {
 				this.fArr.push([{
 					'text': `f(${this.inputNum})`,
@@ -170,7 +170,7 @@ var app = new Vue({
 				}
 
 			}
-			console.log(this.fontSizeArr)
+			//console.log(this.fontSizeArr)
 		}
 	}
 })
@@ -270,5 +270,5 @@ var app = new Vue({
 // }
 
 // var gradient = new gradientColor('#013548', '#554851', 10);
-// console.log(gradient); //控制台输出
+// //console.log(gradient); //控制台输出
 // alert(gradient);

@@ -13,7 +13,6 @@ a {
 }
 
 #app {
-
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -23,24 +22,33 @@ a {
 	justify-content: space-around;
 }
 
+/* 列表容器 */
 .nav {
 	height: 100%;
-	width: 20%;
-	overflow-y: scroll;
+	width: 25%;
+	overflow-y: hidden;
 	/* border-radius: 1vmin; */
 	background-color: white;
-	box-shadow: 0vmin 0vmin 3vmin  rgba(0,0,0,.1);
-	
+	box-shadow: 0vmin 0vmin 3vmin rgba(0, 0, 0, .1);
+
 }
 
+.nav:hover {
+	overflow-y: scroll;
+}
+/* 动画容器 */
 .anmwrap {
-	width: 80%;
+	width: 75%;
 	height: 100%;
 	/* background-color: white; */
 	/* border-radius: 1vmin; */
 	/* box-shadow: 0vmin 0vmin 3vmin #aaa; */
 	overflow-y: scroll;
 }
+
+/* .anmwrap:hover{
+	overflow-y: scroll;
+} */
 
 .mdwrap {
 	width: 100vmin;
@@ -49,14 +57,13 @@ a {
 	background-color: white;
 }
 
-
-
 /*滚动条整体样式*/
 ::-webkit-scrollbar {
 	width: 0.5vmin;
 	/*高宽分别对应横竖滚动条的尺寸*/
 	height: 0.5vmin;
 }
+
 
 /*滚动条里面小方块*/
 ::-webkit-scrollbar-thumb {
@@ -74,12 +81,7 @@ a {
 	opacity: 0;
 }
 
-/* hover有效但是过渡无效 */
-/* .anmwrap:hover::-webkit-scrollbar {
-	background-color: red;
-	opacity: 1;
-} */
-
+/* iframe样式 */
 .algorithms-class {
 	display: block;
 	margin: 0 auto;
@@ -93,55 +95,62 @@ a {
  * 导航栏列表样式
  */
 .nav-list-lv1 {
-	margin: 10px auto;
+	margin: 1.5vmin auto;
 }
 
 .nav-list-lv1-title {
-	width: 90%;
-	margin: 0px auto;
-	border: 1px solid #000000;
+	width: 80%;
+	margin: 1.5vmin auto;
+	/* border: 1px solid #000000; */
 	user-select: none;
+	font-weight: bold;
+	font-size: 3vmin;
+	color: #333;
 }
 
 .nav-list-lv1-content {
-	width: 90%;
-	margin: 0px auto;
+	width: 80%;
+	margin: 1.5vmin auto;
 	overflow: hidden;
 }
 
 .nav-list-lv2 {
-	margin: 10px auto;
+	margin: 1.5vmin auto;
 }
 
 .nav-list-lv2-title {
+	font-size: 2vmin;
+	color: #888;
 	width: 90%;
-	margin: 0px auto;
-	border: 1px solid #aaa;
+	/* margin: 0px auto; */
+	/* border: 1px solid #aaa; */
 	user-select: none;
 }
 
 .nav-list-lv2-content {
 	transition: 0.5s;
-	width: 90%;
-	margin: 0px auto;
+	/* width: 90%;
+	margin: 0px auto; */
 	overflow: hidden;
 }
 
 .nav-list-lv3 {
-	margin: 10px auto;
+	margin: 1.5vmin auto;
 }
 
 .nav-list-lv3-title {
-	width: 90%;
-	margin: 0px auto;
-	border: 1px solid #eee;
+	/* width: 90%;
+	margin: 0px auto; */
+	/* border: 1px solid #eee; */
 	user-select: none;
+	color: #555;
+	font-size: 2.5vmin;
 }
 
 .nav-list-lv3-content {
 	transition: 0.5s;
-	width: 90%;
-	margin: 0px auto;
+	/* width: 90%;
+	margin: 0px auto; */
 	overflow: hidden;
 }
 
