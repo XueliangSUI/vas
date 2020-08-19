@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<transition-group name="list" tag="div" class="cellsListWrap">
-					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellIndex" class="cell list-item" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor,fontSize:fontSize,width:cellItem.width,margin:cellItem.margin}'>
+					<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellItem.text" class="cell list-item" :style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor,fontSize:fontSize,width:cellItem.width,margin:cellItem.margin}'>
 						<div id="">
 							{{cellItem.text}}
 						</div>
