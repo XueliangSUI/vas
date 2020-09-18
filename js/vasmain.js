@@ -13,7 +13,7 @@ var app = new Vue({
 				fold: false
 			}, {
 				title: "数据结构常用算法",
-				// algorithmSrc: "./algorithms/sort/bubble_sort/index.html",
+				// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
 				// mdSrc: "./algorithms/sort/bubble_sort/introduce.md",
 				fold: false,
 				content: [{
@@ -172,7 +172,7 @@ var app = new Vue({
 				}]
 			}],
 			aaaa: "aaa",
-			algorithmsSrc: "./algorithms/sort/bubble_sort/index.html"
+			algorithmsSrc: "./algorithms/sort/bubble_sort/bubble_sort.html"
 		}
 	},
 	mounted: function() {
