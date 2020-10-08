@@ -1,0 +1,28 @@
+.sequential_search_wrap{
+	
+}
+
+
+.square{
+	margin: 5vmin auto;
+	width: 70vmin;
+	height: 70vmin;
+	box-shadow: 0 1vmin 2vmin 2vmin #eee;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell{
+	height: 6vmin;
+	width: 6vmin;
+	font-size: 1vmin;
+	text-align: center;
+	line-height:6vmin;
+	margin:0.5vmin;
+	background-color: aquamarine;
+	/* color: white; */
+}
+
+.cell_on{
+
+}
