@@ -80,7 +80,7 @@ function initMsgQueue() {
 						'id': this.msgQueueId
 					})
 					let tId = this.msgQueueId
-					console.log(color)
+					// console.log(color)
 					setTimeout(() => {
 						this.msgQueueArr.forEach((item, index) => {
 							if (item.id == tId) {

@@ -6,55 +6,22 @@
 	</head>
 	<body>
 		<div id="app" class="main">
-			<div class="an-wrap">
-				<div class="" id="sequential">
-
-				</div>
-
-
-			</div>
-			<div class="ct-wrap">
-				<!-- 控制容器 control-wrap -->
-				<div class="control-input-wrap">
-					<input type="number" min="2" max="9" name="" id="" value="" class="control-input-wrap-input" v-model.number.lazy="inputNum"
-					 @blur="onBlur" />
-					<div class="control-input-wrap-div">
-						长度建议10~200
-					</div>
-
-				</div>
-				<!-- <div class="control-input-wrap">
-					<input type="" name="" id="" value="" class="control-input-wrap-input"/>
-					<div class="control-input-wrap-div">
-						输入文字…
-					</div>
-					
-				</div> -->
-				<div type="button" class="button-blue" @click="speedUp">
-					<div class="" id="autoNextStep">
-						自动
-					</div>
-				</div>
-				<div type="button" class="button-red" @click="nextStep">
-					<div class="">
-						下一步
-					</div>
-				</div>
-				<div type="button" class="button-orange" @click="reset">
-					<div class="">
-						重置
-					</div>
-				</div>
-			</div>
+			<!-- 本偏内容基于React2.6框架完成，并不是因为好写，而是因为开发者在学。 -->
+			
 
 		</div>
+		<!-- 弹出消息提示组件 -->
+		<div id="msgQueueWrap"></div>
 		<!-- 引入控件，可选 -->
 		<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
+		<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
 		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
 		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
 		<script src="sequential-search.js" type="text/babel" charset="utf-8"></script>
+		
+		
 		<link rel="stylesheet" type="text/css" href="./sequential-search.css" />
 	</body>
 </html>
