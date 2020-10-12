@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- 可选的框架 -->
+	<script src="../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="../../../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script> -->
+</head>
+
+<body>
+	<div id="app" class="main">
+		<div class="an-wrap">
+			<div class="infoWrap">
+				<div class="" v-if="turn!=0">
+					第{{turn}}组
+				</div>
+				<div class="" v-if="cellsList[key]!=null">
+					key:{{cellsList[key].text}}
+				</div>
+				<div class="" v-if="cellsList[i]!=null">
+					i:{{cellsList[i].text}}
+				</div>
+				<div class="" v-if="cellsList[j]!=null">
+					j:{{cellsList[j].text}}
+				</div>
+
+			</div>
+			<transition-group name="list" tag="div" class="cellsListWrap">
+				<div id="" v-for="(cellItem,cellIndex) in cellsList" :key="cellItem.text" class="cell list-item"
+					:style='{height:cellItem.height,backgroundColor:cellItem.backgroundColor,fontSize:fontSize,width:cellItem.width,margin:cellItem.margin}'>
+					<div id="">
+						{{cellItem.text}}
+					</div>
+					<div class="key" v-show="key==cellIndex">
+						k
+					</div>
+					<div class="i_j" v-show="i==cellIndex">
+						i
+					</div>
+					<div class="i_j" v-show="j==cellIndex">
+						j
+					</div>
+				</div>
+
+			</transition-group>
+
+		</div>
+
+		<div class="ct-wrap">
+			<!-- 控制容器 control-wrap -->
+			<div class="control-input-wrap">
+				<input type="number" min="2" max="9" name="" id="" value="" class="control-input-wrap-input"
+					v-model.number.lazy="inputNum" @blur="onBlur" />
+				<div class="control-input-wrap-div">
+					长度建议10~200
+				</div>
+
+			</div>
+			<!-- <div class="control-input-wrap">
+					<input type="" name="" id="" value="" class="control-input-wrap-input"/>
+					<div class="control-input-wrap-div">
+						输入文字…
+					</div>
+					
+				</div> -->
+			<div type="button" class="button-blue" @click="speedUp">
+				<div class="" id="autoNextStep">
+					{{speedUpText}}
+				</div>
+			</div>
+			<div type="button" class="button-red" @click="nextStep">
+				<div class="">
+					下一步
+				</div>
+			</div>
+			<div type="button" class="button-orange" @click="reset">
+				<div class="">
+					重置
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹出消息提示组件 -->
+	<div id="msgQueueWrap"></div>
+</body>
+<!-- 引入当前目录下的css和js -->
+<script src="./gradientColor.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="./quick_sort.css" />
+<script type="text/javascript" src="./quick_sort.js"></script>
+<!-- 引入控件，可选 -->
+<link rel="stylesheet" type="text/css" href="../../../css/control.css" />
+<script src="../../../js/control.js" type="text/javascript" charset="utf-8"></script>
+
+
+</html>

@@ -19,19 +19,19 @@
 		<div id="app">
 			<!-- 侧边导航栏 -->
 			<nav class="nav">
-				<div class="nav-list-lv1" v-for="(lv1,index1) in navList">
-					<div class="nav-list-lv1-title" @click="clickNavListTitle(lv1,index1)">
+				<div class="nav-list nav-list-lv1" v-for="(lv1,index1) in navList">
+					<div class="nav-list-title nav-list-lv1-title" @click="clickNavListTitle(lv1,index1)">
 						{{lv1.title}}
 					</div>
 					<div class="nav-list-lv1-content" :class="{'list-height-0':lv1.fold,'list-height-auto':!lv1.fold}" v-if="lv1.content">
-						<div class="nav-list-lv2" v-for="(lv2,index2) in lv1.content">
-							<div class="nav-list-lv2-title" @click="clickNavListTitle(lv2,index1,index2)">
+						<div class="nav-list nav-list-lv2" v-for="(lv2,index2) in lv1.content">
+							<div class="nav-list-title nav-list-lv2-title" @click="clickNavListTitle(lv2,index1,index2)">
 								{{lv2.title}}
 							</div>
 							<div class="nav-list-lv2-content" :class="{'list-height-0':lv2.fold,'list-height-auto':!lv2.fold}" v-if="lv2.content">
-								<div class="nav-list-lv3" v-for="(lv3,index3) in lv2.content">
+								<div class="nav-list nav-list-lv3" v-for="(lv3,index3) in lv2.content">
 									
-										<div class="nav-list-lv3-title" @click="clickNavListTitle(lv3,index1,index2,index3)">
+										<div class="nav-list-title nav-list-lv3-title" @click="clickNavListTitle(lv3,index1,index2,index3)">
 											{{lv3.title}}
 										</div>
 									

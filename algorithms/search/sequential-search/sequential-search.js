@@ -99,7 +99,10 @@ class SequentialSearchWrap extends React.Component {
 				title: "查找完成",
 				text: `顺序查找已完成，共查找${this.state.indexNow}次。`
 			})
-			this.autoNext()
+			this.setState({
+				autoText: '自动'
+			})
+			clearInterval(window.timer)
 			return
 		}
 		// 索引加一
@@ -176,7 +179,7 @@ class TextLine extends React.Component {
 	render() {
 		return (<div className="text_line">
 			<p>查找目标：{this.props.numberToBeFounded}</p>
-			<p>查询次数：{this.props.indexNow}</p>
+			<p>查找次数：{this.props.indexNow}</p>
 		</div>
 		)
 	}

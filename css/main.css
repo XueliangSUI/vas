@@ -3,8 +3,7 @@
 	padding: 0;
 }
 
-html,
-body {
+html, body {
 	height: 100%;
 }
 
@@ -23,6 +22,7 @@ a {
 }
 
 /* 列表容器 */
+
 .nav {
 	height: 100%;
 	width: 25%;
@@ -30,13 +30,14 @@ a {
 	/* border-radius: 1vmin; */
 	background-color: white;
 	box-shadow: 0vmin 0vmin 3vmin rgba(0, 0, 0, .1);
-
 }
 
 .nav:hover {
 	overflow-y: scroll;
 }
+
 /* 动画容器 */
+
 .anmwrap {
 	width: 75%;
 	height: 100%;
@@ -58,30 +59,25 @@ a {
 }
 
 /*滚动条整体样式*/
+
 ::-webkit-scrollbar {
 	width: 0.5vmin;
 	/*高宽分别对应横竖滚动条的尺寸*/
 	height: 0.5vmin;
 }
 
-
 /*滚动条里面小方块*/
+
 ::-webkit-scrollbar-thumb {
 	border-radius: 1vmin;
 	background-color: skyblue;
-	background-image: -webkit-linear-gradient(45deg,
-		rgba(255, 255, 255, 0.2) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, 0.2) 50%,
-		rgba(255, 255, 255, 0.2) 75%,
-		transparent 75%,
-		transparent);
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 	transition: 0.5s;
 	opacity: 0;
 }
 
 /* iframe样式 */
+
 .algorithms-class {
 	display: block;
 	margin: 0 auto;
@@ -94,13 +90,26 @@ a {
 /**
  * 导航栏列表样式
  */
+
+.nav-list-title {
+	transition: 0.2s;
+}
+
+.nav-list-title:hover {
+	/* transition: 0.5s; */
+	background-color: #eee;
+}
+
 .nav-list-lv1 {
-	margin: 1.5vmin auto;
+	/* margin: 1.5vmin auto; */
 }
 
 .nav-list-lv1-title {
-	width: 80%;
-	margin: 1.5vmin auto;
+	width: 100%;
+	padding: 0 10%;
+	height: 7vmin;
+	line-height: 7vmin;
+	margin: 0vmin auto;
 	/* border: 1px solid #000000; */
 	user-select: none;
 	font-weight: bold;
@@ -109,19 +118,24 @@ a {
 }
 
 .nav-list-lv1-content {
-	width: 80%;
-	margin: 1.5vmin auto;
+	width: 100%;
+	/* padding: 0 10%; */
+	/* margin: 1.5vmin auto; */
 	overflow: hidden;
 }
 
 .nav-list-lv2 {
-	margin: 1.5vmin auto;
+	/* margin: 1.5vmin auto; */
 }
 
 .nav-list-lv2-title {
+	width: 100%;
+	padding: 0 10%;
+	height: 6vmin;
+	line-height: 6vmin;
 	font-size: 2vmin;
 	color: #888;
-	width: 90%;
+	/* width: 90%; */
 	/* margin: 0px auto; */
 	/* border: 1px solid #aaa; */
 	user-select: none;
@@ -135,10 +149,14 @@ a {
 }
 
 .nav-list-lv3 {
-	margin: 1.5vmin auto;
+	/* margin: 1.5vmin auto; */
 }
 
 .nav-list-lv3-title {
+	width: 100%;
+	padding: 0 10%;
+	height: 5vmin;
+	line-height: 5vmin;
 	/* width: 90%;
 	margin: 0px auto; */
 	/* border: 1px solid #eee; */
@@ -155,6 +173,7 @@ a {
 }
 
 /* 列表内容隐藏和显示 */
+
 .list-height-0 {
 	max-height: 0px;
 	transition: max-height cubic-bezier(0, 1, 0, 1) 0.2s;
@@ -165,5 +184,4 @@ a {
 .list-height-auto {
 	transition: max-height cubic-bezier(1, 0, 1, 0) 0.2s;
 	max-height: 2000px;
-
 }
