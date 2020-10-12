@@ -36,16 +36,23 @@
 					<div class="key" v-show="key==cellIndex">
 						k
 					</div>
-					<div class="i_j" v-show="i==cellIndex">
+					<div class="i_j" v-show="i==cellIndex&&j!=cellIndex">
 						i
 					</div>
-					<div class="i_j" v-show="j==cellIndex">
+					<div class="i_j" v-show="j==cellIndex&&i!=cellIndex">
 						j
 					</div>
+					<div class="i_j" v-show="j==cellIndex&&i==cellIndex">
+						i&j
+					</div>
+
 				</div>
+				
 
 			</transition-group>
+		<div class="progress" :style="{width:progressWidth}">
 
+			</div>
 		</div>
 
 		<div class="ct-wrap">

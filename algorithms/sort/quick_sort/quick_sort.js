@@ -14,9 +14,10 @@ var app = new Vue({
 				['#c7ecee', '#f368e0']
 			],
 			nextStepMode: 1,
-			key: 'null',
-			i: 'null',
-			j: 'null',
+			key: null,
+			i: null,
+			j: null,
+			progressWidth: '0vmin',
 			turn: 0,
 			groupArr: [],
 			groupIndex: 0,
@@ -61,45 +62,79 @@ var app = new Vue({
 				this.cellsList[tIndex] = tObj
 			}
 			this.stepLength = Math.floor(this.cellsList.length / 2)
-
+			// 重置待排数组
 			this.groupArr = []
 			this.groupArr.push({ i: 0, j: this.cellsList.length - 1 })
+			// // 重置进度条
+			// this.progressWidth = "0vmin"
 		},
 		/**
 		 * 下一步
 		 */
 		nextStep: function () {
-			// 判断待排序组数量
+			// 判断排序是否完成
+			if (this.groupArr.length == 0) {
+				// 排序完成
+				clearInterval(this.timer)
+				this.speedUpText = '超级加速'
+				msgQueue.pushMsgQueue({
+					text: '排序完成'
+				})
+				return
+			}
 
 			// 判断i和j，相等即进入下一组
-			if (this.i == this.j) {
+			if (this.i == this.j && this.i != null) {
 				// 对组分割
 				let tI = this.groupArr[this.groupIndex].i, tJ = this.groupArr[this.groupIndex].j
+				// 移除待排数组首位
 				this.groupArr.shift()
-				this.groupArr.unshift({
-					i: this.j,
-					j: tJ
-				})
-				this.groupArr.unshift({
-					i: tI,
-					j: this.i
-				})
+				// 尝试插入当前右侧数组作为首位
+				if (this.j + 1 < tJ) {
+					// 右侧数组大于长度1时执行插入
+					this.groupArr.unshift({
+						i: this.j + 1,
+						j: tJ
+					})
+				}
 
-				// 若右组的长度大于1，unshift插入右组
-				// 若左组的长度大于1，插入左组
+				// 尝试插入当前左侧数组作为首位
+				if (tI < this.i - 1) {
+					// 左侧数组大于长度1时执行插入
+					this.groupArr.unshift({
+						i: tI,
+						j: this.i - 1
+					})
+				}
+
+				console.log('this.j + 1', this.j + 1, 'tJ', tJ)
+				console.log('this.i-1', this.i - 1, 'tI', tI)
+				// 设置进度条
+				// if (this.j + 1 == tJ && tI == this.i - 1) {
+
+				// 	this.progressWidth = (tJ / this.cellsList.length) * 100 + 'vmin'
+				// } else if (tI == this.i - 1) {
+
+				// 	this.progressWidth = (this.i / this.cellsList.length) * 100 + 'vmin'
+				// }
+
+				// 回归模式1
+				this.nextStepMode = 1
 			}
 
 
 			// 1、组数加1，确定当前key、i、j的值
 			if (this.nextStepMode == 1) {
 				this.turn++
-				this.key = this.groupArr[this.groupIndex].i
-				this.i = this.groupArr[this.groupIndex].i
-				this.j = this.groupArr[this.groupIndex].j
-				this.nextStepMode++
+				if (this.groupArr.length > 0) {
+					this.key = this.groupArr[this.groupIndex].i
+					this.i = this.groupArr[this.groupIndex].i
+					this.j = this.groupArr[this.groupIndex].j
+					this.nextStepMode++
+				}
+
 
 			} else if (this.nextStepMode == 2) {
-				console.log('mode2')
 
 				// 2、j向前比较
 				if (this.cellsList[this.j].text < this.cellsList[this.key].text) {
@@ -114,7 +149,6 @@ var app = new Vue({
 				}
 				this.j--
 			} else if (this.nextStepMode == 3) {
-				console.log('mode3')
 				// 3、i向后比较
 				if (this.cellsList[this.i].text > this.cellsList[this.key].text) {
 					// j值小于key
@@ -134,11 +168,6 @@ var app = new Vue({
 			// 5、i找到比key大的值，与j交换，j前移一位
 
 		},
-		insertionSortForGroup() {
-
-
-
-		},
 		reset() {
 			let tInputNum = this.inputNum
 			clearInterval(this.timer)
@@ -152,7 +181,7 @@ var app = new Vue({
 				this.speedUpText = '暂停'
 				this.timer = setInterval(() => {
 					this.nextStep()
-				}, 30)
+				}, 10)
 			} else {
 				clearInterval(this.timer)
 				this.timer = null

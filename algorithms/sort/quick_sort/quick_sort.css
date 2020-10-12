@@ -56,16 +56,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1vmin;
-	color: red;
+	font-size: 3vmin;
+	color: #999;
+	font-weight: 800;
 }
 
 .key {
+	font-weight: 600;
+
 	position: absolute;
 	bottom: -0vmin;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 3vmin;
-	color: red;
+	color: rgb(255, 110, 110);
+}
+
+.progress{
+	transition: 0.5s;
+	height: 0.5vmin;
+	width: 70vmin;
+	background-color: rgb(92, 255, 141);
 }

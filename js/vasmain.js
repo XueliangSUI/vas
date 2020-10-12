@@ -42,6 +42,11 @@ var app = new Vue({
 						mdSrc: "./algorithms/sort/shell_sort/shell_sort.md"
 						// fold: ""
 					}, {
+						title: "快速排序",
+						algorithmSrc: "./algorithms/sort/quick_sort/quick_sort.html",
+						mdSrc: "./algorithms/sort/quick_sort/quick_sort.md"
+						// fold: ""
+					}, {
 						title: "模板/组件库",
 						algorithmSrc: "./algorithms/sort/mu_ban/mu_ban.html",
 						mdSrc: "./algorithms/sort/mu_ban/mu_ban.md"
@@ -57,14 +62,14 @@ var app = new Vue({
 						algorithmSrc: "./algorithms/search/sequential-search/sequential-search.html",
 						mdSrc: "./algorithms/search/sequential-search/sequential-search.md",
 						// fold: ""
-					}, 
-					// {
-					// 	title: "二分查找",
-					// 	algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-					// 	mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md"
-					// 	// fold: ""
-					// },
-					
+					},
+						// {
+						// 	title: "二分查找",
+						// 	algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// 	mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md"
+						// 	// fold: ""
+						// },
+
 					]
 				}, {
 					title: "递归",
@@ -98,12 +103,12 @@ var app = new Vue({
 						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: ""
 					}
-					// , {
-					// 	title: "二分查找",
-					// 	algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
-					// 	mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
-					// 	// fold: ""
-					// },
+						// , {
+						// 	title: "二分查找",
+						// 	algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
+						// 	mdSrc: "./algorithms/sort/choose_sort/bubble_sort.md"
+						// 	// fold: ""
+						// },
 					]
 				}, {
 					title: "图论",
@@ -178,7 +183,7 @@ var app = new Vue({
 			algorithmsSrc: "./algorithms/sort/bubble_sort/bubble_sort.html"
 		}
 	},
-	mounted: function() {
+	mounted: function () {
 		// this.mdToHtml()
 		this.clickNavListTitle({
 			title: "开发阶段声明",
@@ -192,10 +197,10 @@ var app = new Vue({
 		 * md转HTML，返回HTML格式
 		 * @param {Object} mdSrc
 		 */
-		mdToHtml: function(mdSrc) {
+		mdToHtml: function (mdSrc) {
 			// var md
 			// 获取md文档内容，并转化成HTML格式，并显示
-			$.get(mdSrc, function(response, status, xhr) {
+			$.get(mdSrc, function (response, status, xhr) {
 				$("#mdBody").html(marked(response));
 			});
 		},
@@ -205,7 +210,7 @@ var app = new Vue({
 		 * @param {Object} mdSrc
 		 * @param {Object} fold
 		 */
-		clickNavListTitle: function(lv, index1, index2, index3) {
+		clickNavListTitle: function (lv, index1, index2, index3) {
 			// 控制目录折叠展开
 			/**
 			 * 控制折叠展开功能暂时屏蔽，默认全场展开
@@ -263,7 +268,7 @@ var app = new Vue({
 
 		},
 
-		anmwrapScrolling: function() {
+		anmwrapScrolling: function () {
 			// document.getElementById("anmwrap").style.scrollbar
 		}
 	}
