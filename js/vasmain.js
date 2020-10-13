@@ -63,12 +63,12 @@ var app = new Vue({
 						mdSrc: "./algorithms/search/sequential-search/sequential-search.md",
 						// fold: ""
 					},
-						// {
-						// 	title: "二分查找",
-						// 	algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						// 	mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md"
-						// 	// fold: ""
-						// },
+						{
+							title: "二分查找",
+							algorithmSrc: "./algorithms/search/binary-search/binary-search.html",
+							mdSrc: "./algorithms/search/binary-search/binary-search.md"
+							// fold: ""
+						},
 
 					]
 				}, {
