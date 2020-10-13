@@ -1,0 +1,46 @@
+.square {
+	background-color: #f8f8f8;
+	margin: 0vmin auto;
+	width: 70vmin;
+	height: 70vmin;
+	box-shadow: 0 0vmin 2vmin 2vmin #f8f8f8;
+	border-radius: 1vmin;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell {
+	background-color: #fff;
+	height: 6vmin;
+	width: 6vmin;
+	font-size: 2vmin;
+	color: #555;
+	text-align: center;
+	line-height: 6vmin;
+	margin: 0.5vmin;
+	transition: 0.3s;
+	box-shadow: 0 0 0.5vmin 0.1vmin #ccc;
+	border-radius: 1vmin;
+	/* color: white; */
+}
+
+.cell_on {
+	background-color: aquamarine;
+	box-shadow: 0 0 0.5vmin 0.5vmin rgb(45, 238, 196);
+}
+
+.cell_off {
+	background-color: rgb(235, 235, 235);
+	box-shadow: 0 0 0.5vmin 0.5vmin rgb(199, 199, 199);
+}
+
+.text_line {
+	height: 10vmin;
+	text-align: center;
+	line-height: 10vmin;
+	font-size: 4vmin;
+	color: #777;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-around;
+}
