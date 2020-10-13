@@ -128,36 +128,36 @@ var app = new Vue({
 					fold: false,
 					content: [{
 						title: "迷宫生成1",
-						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: false
 					}, {
 						title: "迷宫生成2",
-						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: false
 					}, {
 						title: "迷宫寻路",
-						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: false
 					}]
 				}, {
 					title: "思维扩展",
-					algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-					mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+					// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: false,
 					content: [{
 						title: "生命游戏",
-						algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-						mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+						// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 						// fold: false
 					}]
 				}]
 			}, {
 				title: "其他",
-				algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
-				mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+				// algorithmSrc: "./algorithms/sort/bubble_sort/bubble_sort.html",
+				// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 				fold: false,
 				content: [{
 					title: "项目相关",
