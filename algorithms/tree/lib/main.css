@@ -2,7 +2,7 @@
 /*去除默认样式*/
 html, body {
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 /*设置画布样式*/
@@ -40,7 +40,7 @@ div.butt div{
     cursor: pointer;
     border:2.5px #5a5a5a solid;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 div.butt div.b3:hover{

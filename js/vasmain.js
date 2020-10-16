@@ -58,11 +58,11 @@ var app = new Vue({
 					mdSrc: "./algorithms/search/search.md",
 					fold: false,
 					content: [{
-						title: "顺序查找",
-						algorithmSrc: "./algorithms/search/sequential-search/sequential-search.html",
-						mdSrc: "./algorithms/search/sequential-search/sequential-search.md",
-						// fold: ""
-					},
+							title: "顺序查找",
+							algorithmSrc: "./algorithms/search/sequential-search/sequential-search.html",
+							mdSrc: "./algorithms/search/sequential-search/sequential-search.md",
+							// fold: ""
+						},
 						{
 							title: "二分查找",
 							algorithmSrc: "./algorithms/search/binary-search/binary-search.html",
@@ -93,16 +93,51 @@ var app = new Vue({
 					// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
 					fold: false,
 					content: [{
-						title: "前序遍历",
-						algorithmSrc: "./algorithms/tree/NLRCompleteBinaryTree/NLRCompleteBinaryTree.html",
-						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: ""
-					}, {
-						title: "后序遍历",
-						algorithmSrc: "./algorithms/tree/LRNCompleteBinaryTree/LRNCompleteBinaryTree.html",
-						// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
-						// fold: ""
-					}
+							title: "自定义二叉树",
+							algorithmSrc: "./algorithms/tree/creatCustomTree/creatCustomTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "生成随机树",
+							algorithmSrc: "./algorithms/tree/creatRandomTree/creatRandomTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "生成随机二叉树",
+							algorithmSrc: "./algorithms/tree/creatRandomBinaryTree/creatRandomBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "生成完全二叉树",
+							algorithmSrc: "./algorithms/tree/creatCompleteBinaryTree/creatCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "前序遍历",
+							algorithmSrc: "./algorithms/tree/NLRCompleteBinaryTree/NLRCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "中序遍历",
+							algorithmSrc: "./algorithms/tree/LNRCompleteBinaryTree/LNRCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "后序遍历",
+							algorithmSrc: "./algorithms/tree/LRNCompleteBinaryTree/LRNCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "层序遍历",
+							algorithmSrc: "./algorithms/tree/LayerCompleteBinaryTree/LayerCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}, {
+							title: "后序遍历",
+							algorithmSrc: "./algorithms/tree/LRNCompleteBinaryTree/LRNCompleteBinaryTree.html",
+							// mdSrc: "./algorithms/sort/bubble_sort/bubble_sort.md",
+							// fold: ""
+						}
 						// , {
 						// 	title: "二分查找",
 						// 	algorithmSrc: "./algorithms/sort/choose_sort/bubble_sort.html",
@@ -183,7 +218,7 @@ var app = new Vue({
 			algorithmsSrc: "./algorithms/sort/bubble_sort/bubble_sort.html"
 		}
 	},
-	mounted: function () {
+	mounted: function() {
 		// this.mdToHtml()
 		this.clickNavListTitle({
 			title: "开发阶段声明",
@@ -197,10 +232,10 @@ var app = new Vue({
 		 * md转HTML，返回HTML格式
 		 * @param {Object} mdSrc
 		 */
-		mdToHtml: function (mdSrc) {
+		mdToHtml: function(mdSrc) {
 			// var md
 			// 获取md文档内容，并转化成HTML格式，并显示
-			$.get(mdSrc, function (response, status, xhr) {
+			$.get(mdSrc, function(response, status, xhr) {
 				$("#mdBody").html(marked(response));
 			});
 		},
@@ -210,7 +245,7 @@ var app = new Vue({
 		 * @param {Object} mdSrc
 		 * @param {Object} fold
 		 */
-		clickNavListTitle: function (lv, index1, index2, index3) {
+		clickNavListTitle: function(lv, index1, index2, index3) {
 			// 控制目录折叠展开
 			/**
 			 * 控制折叠展开功能暂时屏蔽，默认全场展开
@@ -268,7 +303,7 @@ var app = new Vue({
 
 		},
 
-		anmwrapScrolling: function () {
+		anmwrapScrolling: function() {
 			// document.getElementById("anmwrap").style.scrollbar
 		}
 	}
