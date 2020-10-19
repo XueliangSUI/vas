@@ -106,7 +106,7 @@ a {
 
 .nav-list-lv1-title {
 	width: 100%;
-	padding: 0 10%;
+	/* padding: 0 10%; */
 	height: 7vmin;
 	line-height: 7vmin;
 	margin: 0vmin auto;
