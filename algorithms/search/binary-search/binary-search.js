@@ -57,7 +57,7 @@ class BinarySearchWrap extends React.Component {
 		let arr = []
 		// 获取100个1000以下的随机数
 		for (let i = 0; i < 100; i++) {
-			let tnum = Math.floor(Math.random() * 1000) + 1
+			let tnum = Math.floor(Math.random() * 10000) + 1
 			let flag = false
 			for (let j = 0; j < arr.length; j++) {
 				if (arr[j] == tnum) {

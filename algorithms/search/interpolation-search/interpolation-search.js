@@ -57,7 +57,7 @@ class BinarySearchWrap extends React.Component {
 		let arr = []
 		// 获取100个1000以下的随机数
 		for (let i = 0; i < 100; i++) {
-			let tnum = Math.floor(Math.random() * 1000) + 1
+			let tnum = Math.floor(Math.random() * 10000) + 1
 			let flag = false
 			for (let j = 0; j < arr.length; j++) {
 				if (arr[j] == tnum) {
@@ -128,11 +128,17 @@ class BinarySearchWrap extends React.Component {
 
 
 		// 计算当前查询索引
-		let indexNow = parseInt((this.state.i + this.state.j) / 2)
+
+		let indexNow = Math.round
+			(this.state.i
+				+ (this.state.numberToBeFounded - this.state.arr[this.state.i])
+				/ (this.state.arr[this.state.j] - this.state.arr[this.state.i])
+				* (this.state.j - this.state.i)
+			)
 		this.setState({
 			indexNow: indexNow
 		})
-		// console.log(indexNow)
+		console.log(indexNow)
 		// 移除上一步查询元素的样式
 		for (let item of this.state.allCells) {
 			item.classList.remove('cell_on')
@@ -142,7 +148,7 @@ class BinarySearchWrap extends React.Component {
 		// 判断查询结果
 		// 查找步数加一
 		this.setState((state) => ({
-			steps: state.steps+1
+			steps: state.steps + 1
 		}))
 		if (this.state.numberToBeFounded == this.state.allCells[indexNow].innerText) {
 			this.state.steps--
@@ -164,7 +170,7 @@ class BinarySearchWrap extends React.Component {
 			tArr.push({ i: indexNow, j: this.state.j })
 
 			this.setState({
-				j: indexNow,
+				j: indexNow-1,
 				abandonedArr: tArr
 			})
 
@@ -173,7 +179,7 @@ class BinarySearchWrap extends React.Component {
 			let tArr = this.state.abandonedArr
 			tArr.push({ i: this.state.i, j: indexNow })
 			this.setState({
-				i: indexNow,
+				i: indexNow+1,
 				abandonedArr: tArr
 			})
 		}
